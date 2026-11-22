@@ -6,134 +6,98 @@
 <title>人才发展数据库 · 国际升学与学术研究</title>
 <style>
 :root{
-  --ink:#14201D; --ink2:#1D2E29;
-  --teal:#0F7A66; --teal-l:#1A9B82; --gold:#B8852F; --blue:#2B5D8A;
+  --ink:#14201D; --teal:#0F7A66; --teal-l:#1A9B82; --gold:#B8852F; --blue:#2B5D8A;
   --paper:#F7F7F4; --card:#FFFFFF; --line:#E3E9E6; --line2:#EEF3F0;
-  --txt:#22312D; --mut:#75857F; --mut2:#9AA8A3;
-  --side:258px;
+  --txt:#22312D; --mut:#75857F; --mut2:#9AA8A3; --side:258px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%}
-body{
-  font-family:"Microsoft YaHei","PingFang SC","Hiragino Sans GB",-apple-system,sans-serif;
-  background:var(--paper); color:var(--txt); font-size:14px; line-height:1.6;
-  -webkit-font-smoothing:antialiased;
-}
+body{font-family:"Microsoft YaHei","PingFang SC",-apple-system,sans-serif;
+  background:var(--paper);color:var(--txt);font-size:14px;line-height:1.6;-webkit-font-smoothing:antialiased}
 .shell{display:flex;min-height:100vh}
-
-/* ---------- 侧栏 ---------- */
-.side{
-  width:var(--side); flex:0 0 var(--side); background:var(--ink); color:#B7C6C1;
-  position:sticky; top:0; height:100vh; overflow-y:auto; padding:0 0 24px;
-  display:flex; flex-direction:column;
-}
+.side{width:var(--side);flex:0 0 var(--side);background:var(--ink);color:#B7C6C1;
+  position:sticky;top:0;height:100vh;overflow-y:auto;padding:0 0 24px;display:flex;flex-direction:column}
 .side::-webkit-scrollbar{width:6px}
 .side::-webkit-scrollbar-thumb{background:#2E443E;border-radius:3px}
 .brand{padding:22px 20px 18px;border-bottom:1px solid #24352F}
-.brand .logo{color:#fff;font-size:16px;font-weight:700;letter-spacing:.02em}
+.brand .logo{color:#fff;font-size:16px;font-weight:700}
 .brand .sub{color:#6E857E;font-size:11.5px;margin-top:5px;letter-spacing:.04em}
 nav{flex:1;padding:14px 0}
 .grp{padding:14px 20px 6px;font-size:10.5px;letter-spacing:.12em;color:#5E746D;font-weight:700}
 .grp span{color:#3E544D;font-weight:400;letter-spacing:0;margin-left:6px}
-.nav-i{
-  display:flex;align-items:center;gap:9px;padding:8px 20px;cursor:pointer;
-  font-size:13px;color:#A8BAB4;border-left:2px solid transparent;transition:background .12s;
-}
+.nav-i{display:flex;align-items:center;gap:9px;padding:8px 20px;cursor:pointer;
+  font-size:13px;color:#A8BAB4;border-left:2px solid transparent;transition:background .12s}
 .nav-i:hover{background:#1A2A25;color:#DDE8E4}
 .nav-i.on{background:rgba(15,122,102,.2);color:#fff;border-left-color:var(--teal-l);font-weight:600}
-.nav-i i{
-  font-style:normal;font-size:10.5px;color:#5E746D;width:18px;text-align:right;flex:0 0 18px;
-}
+.nav-i i{font-style:normal;font-size:10.5px;color:#5E746D;width:18px;text-align:right;flex:0 0 18px}
 .nav-i.on i{color:var(--teal-l)}
 .nav-i b{font-weight:inherit;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .nav-i em{font-style:normal;font-size:10px;color:#4E635C;background:#1E312B;padding:1px 5px;border-radius:3px}
 .nav-i.on em{color:#9FD4C8;background:#23443C}
 .side-foot{padding:14px 20px 0;border-top:1px solid #24352F;font-size:11px;color:#5E746D;line-height:1.9}
-
-/* ---------- 主区 ---------- */
 .main{flex:1;min-width:0;display:flex;flex-direction:column}
-.top{
-  position:sticky;top:0;z-index:20;background:rgba(247,247,244,.94);
-  backdrop-filter:blur(8px);border-bottom:1px solid var(--line);
-  padding:13px 30px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;
-}
+.top{position:sticky;top:0;z-index:20;background:rgba(247,247,244,.94);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);padding:13px 30px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
 .crumb{font-size:12px;color:var(--mut);flex:1;min-width:180px}
 .crumb b{color:var(--txt);font-weight:600;font-size:13px}
 .tools{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-input[type=search],select{
-  font-family:inherit;font-size:12.5px;color:var(--txt);background:#fff;
-  border:1px solid var(--line);border-radius:7px;padding:6px 10px;outline:none;
-}
+input[type=search],select{font-family:inherit;font-size:12.5px;color:var(--txt);background:#fff;
+  border:1px solid var(--line);border-radius:7px;padding:6px 10px;outline:none}
 input[type=search]{width:190px}
 input[type=search]:focus,select:focus{border-color:var(--teal-l);box-shadow:0 0 0 3px rgba(15,122,102,.08)}
-select{cursor:pointer;max-width:210px}
-.btn{
-  font-family:inherit;font-size:12.5px;color:var(--teal);background:#fff;
-  border:1px solid var(--line);border-radius:7px;padding:6px 12px;cursor:pointer;white-space:nowrap;
-}
+select{cursor:pointer;max-width:220px}
+.btn{font-family:inherit;font-size:12.5px;color:var(--teal);background:#fff;border:1px solid var(--line);
+  border-radius:7px;padding:6px 12px;cursor:pointer;white-space:nowrap}
 .btn:hover{border-color:var(--teal-l);background:#F2FAF7}
 .count{font-size:12px;color:var(--mut2);white-space:nowrap}
-
 #view{padding:26px 30px 56px;max-width:1560px}
-
-/* ---------- 概览 ---------- */
-.hero{margin-bottom:26px}
+.hero{margin-bottom:22px}
 .hero h1{font-size:27px;font-weight:700;letter-spacing:-.01em;color:var(--ink);line-height:1.3}
-.hero p{color:var(--mut);font-size:13.5px;margin-top:9px;max-width:960px}
-.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:22px 0 28px}
+.hero p{color:var(--mut);font-size:13.5px;margin-top:9px;max-width:980px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));gap:12px;margin:20px 0 26px}
 .kpi{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:15px 17px}
-.kpi .n{font-size:27px;font-weight:700;color:var(--ink);line-height:1.1;font-variant-numeric:tabular-nums}
+.kpi .n{font-size:26px;font-weight:700;color:var(--ink);line-height:1.1;font-variant-numeric:tabular-nums}
 .kpi .n small{font-size:13px;font-weight:500;color:var(--mut);margin-left:3px}
 .kpi .l{font-size:12px;color:var(--mut);margin-top:6px}
-.kpi.g .n{color:var(--teal)} .kpi.o .n{color:var(--gold)}
-
-.sec-t{font-size:13px;font-weight:700;color:var(--ink);letter-spacing:.02em;margin:30px 0 12px;
+.kpi.g .n{color:var(--teal)} .kpi.o .n{color:var(--gold)} .kpi.b .n{color:var(--blue)}
+.sec-t{font-size:13px;font-weight:700;color:var(--ink);letter-spacing:.02em;margin:28px 0 12px;
   display:flex;align-items:center;gap:9px}
 .sec-t::after{content:"";flex:1;height:1px;background:var(--line)}
-
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:14px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
 .card h3{font-size:14.5px;font-weight:700;color:var(--ink);margin-bottom:3px}
 .card .meta{font-size:11.5px;color:var(--mut2);margin-bottom:12px}
 .card ul{list-style:none}
-.card li{
-  display:flex;align-items:center;gap:8px;padding:7px 0;border-top:1px solid var(--line2);
-  font-size:12.5px;color:var(--txt);cursor:pointer;
-}
+.card li{display:flex;align-items:center;gap:8px;padding:7px 0;border-top:1px solid var(--line2);
+  font-size:12.5px;color:var(--txt);cursor:pointer}
 .card li:hover{color:var(--teal)}
 .card li i{font-style:normal;font-size:10.5px;color:var(--mut2);width:16px;flex:0 0 16px;text-align:right}
 .card li em{font-style:normal;margin-left:auto;font-size:11px;color:var(--mut2)}
-
-.legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:6px}
+.legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
 .lg{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:14px 16px}
 .lg .tag{font-size:15px;font-weight:700;margin-bottom:6px}
 .lg .tag.g{color:var(--teal)} .lg .tag.o{color:var(--gold)} .lg .tag.b{color:var(--blue)}
 .lg .t{font-size:12.5px;color:var(--txt);font-weight:600}
 .lg .d{font-size:11.5px;color:var(--mut);margin-top:4px;line-height:1.65}
-
-/* ---------- 表页 ---------- */
+.verdict{background:#F2FAF7;border:1px solid #C9E7DE;border-left:3px solid var(--teal);
+  border-radius:0 9px 9px 0;padding:15px 18px;margin:18px 0}
+.verdict h4{font-size:13px;color:#0B6A57;font-weight:700;margin-bottom:7px}
+.verdict p{font-size:12.5px;color:#2A423C;line-height:1.8}
+.verdict b{color:#0B6A57}
 .phead{margin-bottom:16px}
 .phead h2{font-size:19px;font-weight:700;color:var(--ink);line-height:1.4}
-.phead .pnote{
-  font-size:12px;color:var(--mut);margin-top:8px;padding:10px 13px;background:#FBFCFA;
-  border-left:2px solid var(--teal-l);border-radius:0 6px 6px 0;line-height:1.7;
-}
+.phead .pnote{font-size:12px;color:var(--mut);margin-top:8px;padding:10px 13px;background:#FBFCFA;
+  border-left:2px solid var(--teal-l);border-radius:0 6px 6px 0;line-height:1.7}
 .tbox{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
 .tscroll{overflow:auto;max-height:calc(100vh - 230px)}
 table{width:100%;border-collapse:collapse;font-size:12.5px}
-thead th{
-  position:sticky;top:0;z-index:5;background:#F0F5F2;color:#4C605A;
-  font-size:11.5px;font-weight:700;letter-spacing:.03em;text-align:left;
-  padding:10px 12px;border-bottom:1px solid var(--line);white-space:nowrap;
-  cursor:pointer;user-select:none;
-}
+thead th{position:sticky;top:0;z-index:5;background:#F0F5F2;color:#4C605A;font-size:11.5px;
+  font-weight:700;letter-spacing:.03em;text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);
+  white-space:nowrap;cursor:pointer;user-select:none}
 thead th:hover{background:#E7F0EC;color:var(--teal)}
-thead th .ar{font-size:9px;color:var(--mut2);margin-left:3px}
 tbody td{padding:9px 12px;border-bottom:1px solid var(--line2);vertical-align:top;line-height:1.65}
 tbody tr:hover{background:#F6FBF9}
 tbody tr:last-child td{border-bottom:none}
-td.c1{font-weight:600;color:var(--ink);white-space:nowrap}
-td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+td.c1{font-weight:600;color:var(--ink)}
 .clamp{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .clamp.open{-webkit-line-clamp:unset;display:block}
 td .more{font-size:10.5px;color:var(--teal);cursor:pointer;margin-left:4px}
@@ -141,11 +105,10 @@ td .more{font-size:10.5px;color:var(--teal);cursor:pointer;margin-left:4px}
 .b-ok{background:#E2F3ED;color:#0B6A57}
 .b-warn{background:#FBF0DF;color:#95691F}
 .b-blue{background:#E7EFF7;color:#25527A}
+.b-no{background:#FBE9E7;color:#A63D2F}
 .em{color:var(--mut2)}
 mark{background:#FFF1B8;color:inherit;padding:0 1px;border-radius:2px}
 .empty{padding:48px 20px;text-align:center;color:var(--mut2);font-size:13px}
-
-/* ---------- 响应式 ---------- */
 @media(max-width:1080px){
   :root{--side:210px}
   #view{padding:20px 18px 40px}
@@ -170,7 +133,7 @@ mark{background:#FFF1B8;color:inherit;padding:0 1px;border-radius:2px}
   <aside class="side">
     <div class="brand">
       <div class="logo">人才发展数据库</div>
-      <div class="sub">国际升学 · 学术研究</div>
+      <div class="sub">国际升学 · 学术研究 · 验证报告</div>
     </div>
     <nav id="nav"></nav>
     <div class="side-foot" id="foot"></div>
@@ -188,21 +151,17 @@ mark{background:#FFF1B8;color:inherit;padding:0 1px;border-radius:2px}
   </main>
 </div>
 <script>
-const DB = [{"name":"01_国际_国家地区","title":"① 国家和地区：10 个目的地的完整对比","headers":["国家/地区","主流学制","学费（当地货币）","人民币估算","语言门槛","毕业后工作签证","生活成本（年）","认证与政策","适合人群","验证状态"],"rows":[["英国","1 年为主","£25,000—40,000","23—37 万元","IELTS 6.5—7.0（单项 6.0—6.5）","Graduate Route 2 年（博士 3 年）","12—18 万元","留服认证；上海前 50 院校可直接落户","想一年拿学位、预算 45—55 万、接受高强度课程","▲ 未取得原文"],["美国","1—2 年","$50,000—80,000/年","36—58 万元/年","TOEFL 100+ / IELTS 7.0+","OPT 12 个月（STEM 延至 36 个月）","15—25 万元","留服认证；H-1B 需抽签","数理基础强、目标投行或科技公司、预算充足","▲ 未取得原文"],["中国香港","1 年","HK$300,000—500,000","27—45 万元","IELTS 6.5—7.0","IANG 12 个月，续签需受雇","10—15 万元","留服认证；粤港澳大湾区人才政策","想离家近、成本可控、毕业后留港工作","▲ 未取得原文"],["新加坡","1—1.5 年","S$70,000—80,000","37—43 万元","IELTS 7.0 / TOEFL 100","EP 按 COMPASS 计分，金融业门槛更高","12—18 万元","留服认证；公立大学认可度最高","目标亚太金融中心、能接受高学费","● 官网原文"],["澳大利亚","1.5—2 年","A$45,000—60,000/年","21—28 万元/年","IELTS 6.5—7.0","485 签证 2—4 年（按学历层级）","10—15 万元","留服认证；技术移民通道","想留海外工作、有移民意向","▲ 未取得原文"],["加拿大","1—2 年","C$30,000—55,000/年","16—29 万元/年","IELTS 6.5—7.0","PGWP 1—3 年，移民主要通道","8—12 万元","留服认证；移民政策友好","预算敏感、以移民为长期目标","▲ 未取得原文"],["荷兰","1 年","€18,000—25,000","14—20 万元","IELTS 6.5—7.0","zoekjaar 求职年 1 年","8—12 万元","留服认证","追求性价比、英语授课、欧洲就业","▲ 未取得原文"],["法国","1—2 年（高商）","€15,000—25,000","12—20 万元","IELTS 6.5 / TCF B2","APS 求职签证 1 年","8—12 万元","留服认证；高商在金融圈认可度高","预算有限但想去欧洲高商","▲ 未取得原文"],["日本","2 年","¥800,000—1,500,000/年","4—7 万元/年","JLPT N1 或英语项目","特定活动签证，就职可换工作签","6—10 万元","留服认证","日语好、成本敏感、目标日资或中资驻日","▲ 未取得原文"],["韩国","2 年","₩8,000,000—15,000,000/年","4—8 万元/年","TOPIK 4+ 或英语项目","D-10 求职签证","6—9 万元","留服认证","韩语好、成本敏感","▲ 未取得原文"]],"note":"学费仅指项目学费，不含生活费与保险。人民币估算按 1 GBP≈9.2、1 USD≈7.2、1 HKD≈0.92、1 SGD≈5.35、1 AUD≈4.7、1 EUR≈7.8、1 JPY≈0.048、1 KRW≈0.0053；实际按当日汇率折算。"},{"name":"02_国际_院校项目","title":"②③④ 高校学院专业 · 项目学制及学费 · GPA／语言／科研要求（16 个项目）","headers":["院校","学院","项目","地区","学制","学费","语言要求","GPA／科研／其他要求","申请轮次与时间","官方页面","验证状态","核验说明"],"rows":[["新加坡国立大学 NUS","商学院","MSc Finance","新加坡","1 年","S$71,200（不含 GST）／S$77,608（含 9% GST）","IELTS 7.0 / TOEFL 100","相关本科背景；GMAT/GRE 建议提交","2027 年 8 月入学；申请费 S$100、接受费 S$10,900、两期各 S$33,354","mscfin.nus.edu.sg/programme-fees","● 官网原文","已抓取费用页（2027 学年）"],["南洋理工大学 NTU","南洋商学院 NBS","MSc Finance","新加坡","1 年（3 学期，8 月—次年 5 月）","S$78,480（含 9% GST 与注册费）","TOEFL/IELTS（本科非英语授课者需提交）","良好本科学位，不限专业；GMAT/GRE 可选；无需工作经验","R1 11/30、R2 1/31、R3 3/31；滚动录取，建议早申；申请费 S$100","ntu.edu.sg/education/graduate-programme/master-of-science-in-finance","● 官网原文","已抓取项目页（2027 入学）"],["香港大学 HKU","商学院","Master of Finance","中国香港","1—2 年","HK$400,000—500,000","IELTS 6.5（单项 5.5）/ TOEFL 80","相关背景；GMAT/GRE 建议；部分方向偏好工作经验","多轮录取，首轮约 10 月开放","business.hku.hk/programmes/postgraduate/master-of-finance","▲ 未取得原文","站点连接超时，数字为公开区间"],["香港中文大学 CUHK","商学院","MSc in Finance","中国香港","1 年","HK$350,000—450,000","IELTS 6.5 / TOEFL 79","相关背景；GMAT/GRE 建议提交","多轮，滚动录取","mfin.bschool.cuhk.edu.hk","▲ 未取得原文","页面 JS 渲染，未取到正文"],["香港科技大学 HKUST","商学院","MSc in Finance","中国香港","1 年","HK$400,000 左右","IELTS 6.5（单项 5.5）/ TOEFL 80","量化背景优先；GMAT/GRE 建议","多轮，首轮约 9—10 月","bm.ust.hk/msc-finance","▲ 未取得原文","页面 JS 渲染，未取到正文"],["香港理工大学 PolyU","会计及金融学院","MSc in Finance (Investment Management)","中国香港","1 年","HK$300,000—380,000","IELTS 6.0 / TOEFL 80","相关背景；工作经验加分","滚动录取，先到先审","polyu.edu.hk/af/study/pg","▲ 未取得原文","未抓取，区间参考"],["伦敦政治经济学院 LSE","金融系","MSc Finance","英国","1 年","£45,000 左右","IELTS 7.0（单项 6.5）","二等一荣誉学位以上；GMAT 建议 700+；量化背景","滚动录取，招满即止，建议 11 月前提交","lse.ac.uk/finance","▲ 未取得原文","官网 URL 调整，多轮 404"],["帝国理工学院 Imperial","商学院","MSc Finance","英国","1 年","£45,000 左右","IELTS 7.0（单项 6.5）","量化背景强；GMAT 建议提交","分轮录取，首轮约 10 月","imperial.ac.uk/business-school/master/finance","▲ 未取得原文","页面未返回正文"],["伦敦大学学院 UCL","管理学院","MSc Finance","英国","1 年","£38,000—42,000","IELTS 7.0（单项 6.5）","相关背景；部分方向要求 GMAT","分轮，首轮约 10 月","ucl.ac.uk/prospective-students/graduate","▲ 未取得原文","未抓取，区间参考"],["华威大学 Warwick","华威商学院 WBS","MSc Finance","英国","1 年","£38,000 左右","IELTS 7.0（两项 6.0/6.5）","相关本科背景；GMAT 非强制但建议","滚动录取，招满即止","warwick.ac.uk/study/postgraduate/courses","▲ 未取得原文","课程页 404"],["曼彻斯特大学 Manchester","Alliance MBS","MSc Finance","英国","1 年","£35,000 左右","IELTS 7.0（单项 6.5）","相关背景；均分 80—85 以上","分轮录取","alliancembs.manchester.ac.uk/study/masters","▲ 未取得原文","页面 JS 渲染"],["爱丁堡大学 Edinburgh","商学院","MSc Finance","英国","1 年","£33,000—38,000","IELTS 7.0（单项 6.5）","相关背景；均分 85 以上","分轮，首轮约 10 月","ed.ac.uk/studying/postgraduate","▲ 未取得原文","未抓取，区间参考"],["墨尔本大学 Melbourne","商学院","Master of Finance","澳大利亚","1.5—2 年","A$50,000/年 左右","IELTS 6.5（单项 6.0）","相关背景可申请学分减免","两季入学（2 月/7 月）","study.unimelb.edu.au/find/courses/graduate","▲ 未取得原文","Cloudflare 403 拦截"],["悉尼大学 Sydney","商学院","Master of Commerce (Finance)","澳大利亚","1.5—2 年","A$52,000/年 左右","IELTS 7.0（单项 6.0）","相关背景；均分 65%+","两季入学","sydney.edu.au/courses","▲ 未取得原文","未抓取，区间参考"],["多伦多大学 Toronto","Rotman 商学院","Master of Finance","加拿大","1—2 年","C$55,000 左右","IELTS 7.0 / TOEFL 100","相关背景；部分要求 2 年工作经验","分轮录取","rotman.utoronto.ca","▲ 未取得原文","未抓取，区间参考"],["巴黎高等商学院 HEC","HEC Paris","MSc in Finance","法国","1—2 年","€25,000—30,000","IELTS 7.0 / TOEFL 100","GMAT 建议 700+；数理背景优先","分轮，首轮约 10 月","hec.edu/en/master-s-programs","▲ 未取得原文","未抓取，区间参考"]],"note":"绿底两行为已抓取官网原文（NUS 2027 学年费用页、NTU 2027 入学项目页）。其余 14 项在抓取时分别遇到超时、SSL 拦截、Cloudflare 403、404、JS 渲染，数字为公开量级区间——报考前请点开「官方页面」列逐项核对。"},{"name":"03_国际_申请时间线","title":"⑤ 申请时间和材料：从大二到行前的 9 个阶段","headers":["阶段","时间窗","核心任务","需要准备的材料","常见坑"],"rows":[["大二上—大二下","2 年准备期的起点","把均分刷到 85 以上；启动雅思/托福备考（有效期 2 年，别太早考）","中英文成绩单、在读证明","大一绩点挖的坑很难补——GPA 是唯一没法用文书弥补的指标"],["大二暑假","第一份实习","券商/银行/四大实习，为文书积累可写的素材","实习证明、实习推荐人意向","与申请方向无关的实习在文书里等于白写"],["大三上","语言 + 标化","雅思 7.0 或托福 100；申美国/香港建议 GMAT 700+ 或 GRE 320+","雅思/托福成绩单、GMAT/GRE 成绩单","语言成绩有效期 2 年，大三上考出的成绩刚好覆盖申请季"],["大三下","锁定推荐人与文书初稿","确定 3 位推荐人（2 学术 + 1 实习）；写个人陈述初稿","推荐信、PS 初稿、简历（CV）","推荐人要能说出你的具体细节，头衔大但不了解你等于减分"],["大三暑假","第二份实习 + 定校","补充一段相关实习；确定 6—8 所目标校（冲刺/匹配/保底各 2—3 所）","实习证明、选校清单、各校文书素材表","只冲梦校不留保底，是最常见的翻车原因"],["大四上 9—10 月","首轮申请（命中率最高）","港新英多为滚动录取，首轮名额最多，尽早提交","完整材料包：PS、CV、成绩单、语言成绩、推荐信 2—3 封、申请费","拖到截止日当天提交，系统崩溃的例子每年都有"],["大四上 11—12 月","补申与面试","补申第二轮；准备 video interview / Kira 面试","面试题库、Kira 平台测试","面试不准备，口语现场崩盘，前面材料再好也白搭"],["大四下 1—4 月","offer 比较与押金","横向比较 offer（费用、就业、签证）；缴押金锁位","录取函、押金汇款凭证","押金通常为学费的 10%—20%，交了不退"],["大四下 5—8 月","签证与行前","办学生签证、订宿舍、体检、换汇","存款证明（覆盖 1 年费用）、录取函、体检报告、机票、住宿确认","英国存款证明需连续存满 28 天，临时抱佛脚会被拒签"]],"note":"时间轴按「大四毕业当年 9 月入学」倒推。若目标美国项目，截止日普遍更早（12 月—1 月），整体需再提前 1—2 个月；若目标是春季入学，则整体后移半年。"},{"name":"04_国际_奖学金","title":"⑥ 奖学金与资金支持：12 类资金来源","headers":["项目名称","类型","覆盖范围与金额","适用对象","申请时间","难度","关键限制"],"rows":[["国家留学基金委 CSC 国家公派","政府（中国）","生活费 + 一次往返机票；部分项目含学费","博士为主，硕士名额极少","每年 1—3 月","高","应届本科生基本只能申博士项目，硕士几乎无门"],["志奋领 Chevening","政府（英国）","全额：学费 + 生活费 + 往返机票","需 2 年以上工作经验","每年 8—11 月","高","应届生不符合资格，工作几年后才有机会"],["香港博士奖学金 HKPFS","政府（香港）","每年 HK$331,200 + 会议差旅津贴","博士申请者","每年 9—12 月","极高","需提前联系导师并获得院系提名"],["新加坡 MOE 服务义务计划","政府（新加坡）","学费补贴（约为国际生学费的 40%—60%）","公立大学录取者","随录取申请","中","代价是毕业后须在新加坡工作 3 年"],["NUS / NTU 项目奖学金","院校","学费 10%—50% 减免","学术成绩优异者","随 offer 自动评定","中","无需单独申请，但金额普遍不大"],["港校入学奖学金","院校","HK$50,000—150,000 一次性","GPA 与 GMAT 双高","随 offer 自动评定","中","部分院校需在申请表中勾选申请"],["澳洲 IPRS 国际研究生奖学金","政府（澳大利亚）","全额学费 + 生活费 + 保险","研究型学位（MPhil/PhD）","随申请","高","授课型硕士不适用"],["加拿大 Vanier 博士奖学金","政府（加拿大）","每年 C$50,000，最长 3 年","博士","每年 8—11 月","极高","需院校内部提名，竞争全球名额"],["法国埃菲尔 Excellence 奖学金","政府（法国）","每月 €1,181 + 机票 + 保险","硕士与博士","每年 1 月截止","高","必须由录取院校提名，个人不能直接申请"],["荷兰 Orange Tulip 奖学金","政府 + 院校","学费 25%—100% 减免","中国籍申请者","每年 2—4 月","中","仅适用参与该项目的特定院校与专业"],["日本 MEXT 国费奖学金","政府（日本）","全额学费 + 每月 ¥143,000—145,000","硕士与博士","使馆推荐（前一年 4—5 月）或院校推荐","高","需提前一年启动，语言要求高"],["院校 Merit-based 入学奖","院校","学费 10%—30% 减免","所有被录取者","随 offer 自动评定","低—中","最常见的一类，但覆盖金额小，主要起象征作用"]],"note":"对应届本科生而言，现实可及的主要是「院校 Merit-based」与「NUS/NTU 项目奖」；CSC 硕士通道、志奋领、Vanier 等大多要求工作经验或博士身份。"},{"name":"05_国际_毕业去向","title":"⑦ 毕业去向和就业信息：10 个目的地的就业面","headers":["国家/地区","典型雇主","主流岗位","起薪区间","工作签证与留用","回国认可度"],"rows":[["英国","四大、投行中后台、咨询公司、中资银行伦敦分行","审计、风控、财务分析、合规","£30,000—45,000/年","Graduate Route 2 年（博士 3 年），无需雇主担保","高（G5 与 WBS/LSE 尤甚）"],["美国","投行、资产管理、科技公司财务部、咨询","IB analyst、quant、corporate finance、consulting","$80,000—120,000/年","OPT 12 个月（STEM 36 个月），H-1B 需抽签","极高"],["中国香港","投行、资产管理、家族办公室、四大、中资券商","IB analyst、equity research、audit、risk","HK$25,000—40,000/月","IANG 12 个月，续签需受雇","极高（与内地招聘池完全打通）"],["新加坡","DBS、OCBC、UOB、GIC、淡马锡、中资券商新加坡分部","corporate banking、risk、asset management","S$5,000—7,500/月","EP 按 COMPASS 计分，金融业薪资门槛更高","高"],["澳大利亚","四大、四大行、中资企业澳洲分部","audit、tax、financial planning、credit analysis","A$65,000—85,000/年","485 签证 2—4 年，可转技术移民","中高"],["加拿大","五大行、保险公司、会计师事务所","financial analyst、audit、risk","C$60,000—80,000/年","PGWP 1—3 年，是移民主通道","中高"],["荷兰","ING、ABN AMRO、四大、贸易与物流企业","risk、treasury、audit","€40,000—55,000/年","zoekjaar 求职年 1 年","中"],["法国","BNP Paribas、Société Générale、四大、中资驻法机构","market risk、audit、corporate finance","€38,000—50,000/年","APS 求职签证 1 年","中（高商毕业生认可度更高）"],["日本","野村、大和、三菱 UFJ、中资驻日机构","research、sales、back office","¥4,500,000—6,000,000/年","特定活动签证，就职后可换工作签证","中"],["韩国","三星证券、未来资产、KB 金融集团","research、IB、risk","₩40,000,000—55,000,000/年","D-10 求职签证","中"]],"note":"起薪为应届金融硕士的公开量级区间，不含奖金；各地税负与生活成本差异大，比较时应看税后可支配收入而非税前数字。"},{"name":"06_国际_学位政策","title":"⑧ 学位认可及政策信息：12 项必须提前弄清的事","headers":["事项","内容","适用条件","办理渠道","注意事项"],"rows":[["国（境）外学历学位认证","教育部留学服务中心认证，是考公、落户、国企入职的前提","所有境外正规院校学历","cscse.edu.cn（在线提交）","需毕业证、完整成绩单、护照与签证页、出入境记录；全程网办"],["上海落户（世界前 50 院校）","可直接落户，无社保基数与缴纳时长要求","QS/THE/USNews/软科四大榜单前 50","上海市人社局一网通办","排名按毕业当年的四大榜单认定，须在回国 2 年内来沪工作"],["上海落户（51—100 院校）","缴满 6 个月社保即可申请落户","四大榜单 51—100","上海市人社局一网通办","社保基数需达到当年 1 倍以上"],["北京落户","硕士以上 + 留服认证 + 连续缴纳社保，通过用人单位指标申请","原则上 45 岁以下","北京市人社局","指标紧张，关键在单位是否有落户名额"],["深圳落户","境外硕士可直接落户，部分区另有租房与生活补贴","境外硕士及以上","深圳市人社局","补贴标准按区不同，需落户后申请"],["广州落户","境外硕士可直接落户，需档案调入","境外硕士及以上","广州市人社局","档案不调入会影响后续职称评定"],["免税车指标","留学生购国产车免征购置税与进口零部件关税","境外学习满 1 年、回国 1 年内","海关总署指定代办机构","车型有限且须在回国 1 年内办理，过期作废"],["创业扶持","各地留学人员创业园提供启动资金、场地减免与贷款贴息","有落地创业项目","当地人社局 / 留学人员创业园","需入驻园区并满足考核要求"],["公务员报考资格","认证后可按应届生或社会人员报考，部分岗位单设「海外留学人员」","已完成留服认证","国考 / 省考公告","专业名称须与岗位目录对应，认证书上的专业名常与岗位不符"],["职称评定","认证学历可作为职称评审的学历依据","已认证学历","当地人社部门","部分职称系列还需业绩与继续教育学时"],["高校教职通道","境外博士可走「海外优青」等人才通道，待遇与启动经费更优","境外博士，成果突出","各校人事处 / 国家自然科学基金委","一般要求博士毕业 3 年内且未回国工作，时间窗口紧"],["认证材料清单","毕业证、成绩单、护照、签证页、出入境记录（按提示逐项上传）","所有认证申请者","cscse.edu.cn 在线系统","全程网办无需邮寄，但材料不全会退回重交，耗时 1—2 个月"]],"note":"政策年年调整，尤其落户的院校名单与社保基数。上表为通行口径，办理前必须以「办理渠道」列的官方入口核对当年文件——这是本表里最容易过期的一部分。"},{"name":"07_学术_学科方向","title":"① 学科研究方向：8 个学科的完整版图","headers":["学科","学科门类","主要研究方向","代表期刊（中文 / 国际）","国内强校","主要就业出口","研究特征"],"rows":[["金融学","经济学","资产定价、公司金融、行为金融、市场微观结构、金融工程、数字金融、家庭金融","《金融研究》《管理世界》/ Journal of Finance、JFE、RFS","清华五道口、北大光华、上交高金、人大财金、央财金融","券商研究所、公募基金、银行总行、监管机构","以实证为主，结构模型与机器学习占比上升"],["经济学","经济学","微观理论、宏观经济学、计量经济学、产业组织、发展经济学、劳动经济学","《经济研究》《管理世界》/ AER、QJE、Econometrica","北大 CCER、清华经管、人大经济、复旦、上交安泰","政策研究、高校教职、国际组织、智库","理论建模与因果推断并重，识别策略是发表关键"],["会计学","管理学","财务会计、审计、管理会计、公司治理、信息披露、会计稳健性","《会计研究》《审计研究》/ JAR、JAE、TAR、RAST","厦门大学、上海财经、人大商学院、央财会计、中南财","会计师事务所、企业财务部、证监会与交易所","档案式实证为主，实验与文本分析增长快"],["财政学","经济学","公共品供给、税收政策、地方财政与债务、社会保障、政府预算绩效","《财政研究》《税务研究》/ Journal of Public Economics","央财财政税务、上财、人大财政金融、中南财、东北财","财税系统、发改委、财政科学研究院、智库","政策评估方法（DID/RDD）为主，微观模拟为辅"],["统计学","理学","数理统计、贝叶斯统计、高维统计、时间序列、金融统计与风险管理","《统计研究》/ JASA、Annals of Statistics、Biometrika","北大数学、人大统计、上财统计、厦大、东北师大","量化研究、风控建模、数据科学、生物统计","理论推导与计算方法并重，对数学基础要求最高"],["管理科学与工程","管理学","运筹优化、供应链管理、信息系统、决策分析、金融工程","《管理科学学报》《系统工程理论与实践》/ Management Science、Operations Research","清华经管、上交安泰、西交管理、华科、央财管工","管理咨询、供应链管理、互联网算法与策略","建模与算法为主，近年与机器学习深度结合"],["国际商务","管理学","跨国经营、国际贸易、全球供应链、跨境电商、对外直接投资","《国际贸易问题》《世界经济》/ Journal of International Business Studies","对外经贸大学、上财、央财、南开、中山大学","外贸企业、跨国公司在华机构、跨境电商","实证与案例并重，重视国别与制度差异"],["审计","管理学","审计质量、内部控制、政府审计、数据审计、审计定价","《审计研究》《会计研究》/ Auditing: A Journal of Practice & Theory","南京审计大学、央财、中南财、西南财","审计署与地方审计机关、事务所、企业内部审计","档案式实证与实验研究并重，近年数据审计方向升温"]],"note":"方向划分为该领域通行结构，不代表某一校培养方案的原文。国内强校按学科评估与近年发文情况排列，仅作参考。"},{"name":"08_学术_细分主题","title":"② 细分研究主题：40 个主题，每个配子问题与数据来源","headers":["学科","细分主题","可延伸的子问题","可用数据","代表文献"],"rows":[["金融学","资产定价与因子模型","A 股三因子的解释力有多强？动量与反转为何与美股相反？","CSMAR 股价与财务数据","Fama & French (1993)"],["金融学","公司金融与资本结构","注册制下 IPO 定价效率提升了多少？杠杆率如何影响投资？","CSMAR IPO 与财报","Modigliani & Miller (1958)"],["金融学","行为金融与投资者情绪","散户情绪如何影响换手率与波动？有限关注与公告反应","CSMAR 交易数据、百度指数","Shleifer & Vishny (1997)"],["金融学","市场微观结构与流动性","订单拆分与价格冲击的关系？做市商如何管理库存？","高频行情、逐笔委托","Kyle (1985)"],["金融学","金融工程与衍生品","期权隐含波动率的微笑形态？雪球产品的对冲成本","期权行情、中金所数据","Black-Scholes (1973)"],["金融学","数字金融与金融科技","移动支付如何影响家庭消费与创业？","CFPS、北大数字普惠金融指数","—"],["金融学","机构投资者与基金业绩","基金业绩是否可持续？抱团持股与崩盘风险","CSMAR 基金持仓","—"],["金融学","家庭金融与资产配置","房产是否挤出风险资产？金融素养与市场参与率","CHFS、CFPS","—"],["经济学","微观理论与机制设计","拍卖机制如何用于碳配额分配？","实验数据、政策文本","Samuelson (1947)"],["经济学","宏观经济增长","全要素生产率如何测算与分解？","Penn World Table、统计年鉴","Solow (1956)"],["经济学","计量方法与因果推断","LATE 的识别条件是什么？双重稳健估计的性质","模拟数据 + 观测数据","Angrist & Imbens (1994)"],["经济学","产业组织与反垄断","平台「二选一」的福利效应如何量化？","平台数据、处罚决定书","—"],["经济学","发展经济学","扶贫政策的长期效果能否持续？","CHIP、CFPS","Acemoglu et al. (2001)"],["经济学","劳动经济学","最低工资的就业效应？教育回报率的年代变化","CHIP、CGSS","—"],["经济学","区域与城市经济学","高铁的溢出效应有多大？城市规模与工资溢价","城市统计年鉴、CEIC","—"],["经济学","环境与能源经济学","碳交易试点是否真的减排？","CEADs、企业排放数据","—"],["会计学","财务会计与准则","新收入准则如何改变盈余的时间分布？","CSMAR 财务报表","Ball & Brown (1968)"],["会计学","审计质量与独立性","事务所强制轮换的效果？关键审计事项有信息含量吗？","CSMAR 审计意见与事务所","DeAngelo (1981)"],["会计学","盈余管理","真实活动盈余管理如何识别？","财报 + 现金流量表","Healy & Wahlen (1999)"],["会计学","公司治理","股权结构与大股东掏空的关系？","CSMAR 治理数据","Jensen & Meckling (1976)"],["会计学","信息披露与文本分析","MD&A 语调能否预测业绩？","年报文本 + NLP 工具","—"],["会计学","会计稳健性","条件稳健性与无条件稳健性如何区分？","财务报表数据","Basu (1997)"],["财政学","税收政策与企业行为","留抵退税的效果？企业避税与关联交易","税务年鉴、CSMAR","Ramsey (1927)"],["财政学","地方财政与债务","城投债的风险溢价如何定价？土地财政可持续吗？","Wind 城投债、财政年鉴","Qian & Weingast (1997)"],["财政学","社会保障","社保降费如何影响企业用工？养老金并轨的分配效应","人社部统计、CFPS","—"],["财政学","政府预算与绩效","预算绩效评价的指标体系怎么建？","财政年鉴、部门预算","Musgrave (1959)"],["财政学","财政联邦主义","省以下财政体制的激励效应？","省级财政数据","Oates (1972)"],["统计学","高维统计与变量选择","Lasso 在信用评分中的预测表现？","信贷数据、模拟数据","Tibshirani (1996)"],["统计学","时间序列与波动率建模","GARCH 族对极端行情的预测能力？","高频行情数据","Box & Jenkins (1970)"],["统计学","因果推断的统计基础","异质性处理效应如何识别与估计？","RCT 或准实验数据","Rubin (1974)"],["统计学","贝叶斯方法","先验选择对后验推断的影响有多大？","模拟 + 实证数据","—"],["统计学","金融统计与风险管理","VaR 与 ES 的估计精度比较？","行情数据、持仓数据","Hansen (1982)"],["管理科学与工程","运筹优化","供应链网络如何设计最省成本？","企业运营数据","—"],["管理科学与工程","供应链管理","牛鞭效应如何量化与缓解？","行业数据、企业调研","Lee et al. (1997)"],["管理科学与工程","信息系统与数字化","数字化转型对企业绩效的影响路径？","年报文本 + CSMAR","—"],["管理科学与工程","决策分析与博弈","平台补贴的最优策略是什么？","平台交易数据","Nash (1950)"],["国际商务","跨国公司与 FDI","外资进入模式如何选择？","商务部统计、企业年报","Dunning (1988)"],["国际商务","跨境电商与全球供应链","跨境电商如何降低中小企业出口门槛？","海关数据、平台数据","—"],["审计","国家审计与治理","审计全覆盖的政策效果如何评估？","审计署公告","—"],["审计","内部审计与风险控制","内控缺陷披露的市场反应？","CSMAR 内控数据","—"]],"note":"「可用数据」列是选题的第一道筛子：数据拿不到的方向，问题再漂亮也做不出来。建议按「数据 → 方法 → 问题」的顺序倒推选题。"},{"name":"09_学术_经典文献","title":"③ 经典理论和代表性文献：50 篇，可按作者＋年份检索","headers":["学科","作者","年份","标题","核心贡献与理论"],"rows":[["金融学","Markowitz","1952","Portfolio Selection","均值—方差组合理论，现代组合理论起点"],["金融学","Modigliani & Miller","1958","The Cost of Capital, Corporation Finance and the Theory of Investment","资本结构无关论（MM 定理）"],["金融学","Sharpe","1964","Capital Asset Prices: A Theory of Market Equilibrium","资本资产定价模型（CAPM）"],["金融学","Black & Scholes","1973","The Pricing of Options and Corporate Liabilities","期权定价公式，衍生品定价基石"],["金融学","Jensen & Meckling","1976","Theory of the Firm: Managerial Behavior, Agency Costs and Ownership Structure","代理成本框架，公司治理研究基础"],["金融学","Ross","1977","The Determination of Financial Structure: The Incentive-Signalling Approach","信号理论解释资本结构"],["金融学","Grossman & Stiglitz","1980","On the Impossibility of Informationally Efficient Markets","信息有效市场悖论，奠定微观结构基础"],["金融学","Kyle","1985","Continuous Auctions and Insider Trading","做市商与知情交易者模型"],["金融学","Fama & French","1993","Common Risk Factors in the Returns on Stocks and Bonds","三因子模型"],["金融学","Shleifer & Vishny","1997","The Limits of Arbitrage","套利限制，行为金融的理论基础"],["经济学","Coase","1937","The Nature of the Firm","交易成本与企业边界"],["经济学","Samuelson","1947","Foundations of Economic Analysis","用数学系统化微观理论"],["经济学","Arrow & Debreu","1954","Existence of an Equilibrium for a Competitive Economy","一般均衡存在性证明"],["经济学","Solow","1956","A Contribution to the Theory of Economic Growth","新古典增长模型"],["经济学","Lucas","1976","Econometric Policy Evaluation: A Critique","卢卡斯批判"],["经济学","Kydland & Prescott","1982","Time to Build and Aggregate Fluctuations","真实经济周期，DSGE 传统"],["经济学","North","1990","Institutions, Institutional Change and Economic Performance","制度变迁理论"],["经济学","Angrist & Imbens","1994","Identification and Estimation of Local Average Treatment Effects","LATE，现代因果推断框架"],["经济学","Acemoglu, Johnson & Robinson","2001","The Colonial Origins of Comparative Development","制度与长期增长的因果识别"],["会计学","Ball & Brown","1968","An Empirical Evaluation of Accounting Income Numbers","会计盈余的信息含量，实证会计开山之作"],["会计学","Jensen & Meckling","1976","Theory of the Firm: Managerial Behavior, Agency Costs and Ownership Structure","代理成本引入会计与治理研究"],["会计学","Simunic","1980","The Pricing of Audit Services: Theory and Evidence","审计定价模型"],["会计学","DeAngelo","1981","Auditor Size and Audit Quality","审计质量与事务所规模"],["会计学","Watts & Zimmerman","1986","Positive Accounting Theory","实证会计理论三大假设"],["会计学","Basu","1997","The Conservatism Principle and the Asymmetric Timeliness of Earnings","会计稳健性度量"],["会计学","Dechow, Sloan & Sweeney","1995","Detecting Earnings Management","修正 Jones 模型，盈余管理检测标准"],["会计学","Healy & Wahlen","1999","A Review of the Earnings Management Literature","盈余管理综述"],["会计学","Barth, Beaver & Landsman","2001","The Relevance of the Value Relevance Literature for Financial Accounting Standard Setting","价值相关性研究综述"],["财政学","Ramsey","1927","A Contribution to the Theory of Taxation","最优税制与逆弹性法则"],["财政学","Musgrave","1959","The Theory of Public Finance","公共财政三大职能框架"],["财政学","Tiebout","1956","A Pure Theory of Local Expenditures","用脚投票与地方公共品"],["财政学","Mirrlees","1971","An Exploration in the Theory of Optimum Income Taxation","信息不对称下的最优所得税"],["财政学","Oates","1972","Fiscal Federalism","财政联邦主义标准框架"],["财政学","Qian & Weingast","1997","Federalism as a Commitment to Preserving Market Incentives","中国式财政联邦主义"],["财政学","Besley & Coate","2003","Elected versus Appointed Regulators: Theory and Evidence","政治经济学与规制选择"],["统计学","Fisher","1922","On the Mathematical Foundations of Theoretical Statistics","极大似然与统计推断基础"],["统计学","Neyman & Pearson","1933","On the Problem of the Most Efficient Tests of Statistical Hypotheses","假设检验框架"],["统计学","Box & Jenkins","1970","Time Series Analysis: Forecasting and Control","ARIMA 建模方法论"],["统计学","Rubin","1974","Estimating Causal Effects of Treatments in Randomized and Nonrandomized Studies","潜在结果（反事实）框架"],["统计学","Hansen","1982","Large Sample Properties of Generalized Method of Moments Estimators","广义矩估计 GMM"],["统计学","Tibshirani","1996","Regression Shrinkage and Selection via the Lasso","Lasso 与变量选择"],["统计学","Breiman","2001","Random Forests","随机森林算法"],["管理科学与工程","Nash","1950","Equilibrium Points in N-Person Games","非合作博弈均衡存在性"],["管理科学与工程","Arrow, Harris & Marschak","1951","Optimal Inventory Policy","报童模型"],["管理科学与工程","Little","1961","A Proof for the Queuing Formula: L = λW","排队论 Little 定律"],["管理科学与工程","Porter","1980","Competitive Strategy","五力模型与竞争战略"],["管理科学与工程","Davis, Bagozzi & Warshaw","1989","User Acceptance of Computer Technology","技术接受模型 TAM"],["管理科学与工程","Lee, Padmanabhan & Whang","1997","Information Distortion in a Supply Chain: The Bullwhip Effect","牛鞭效应"],["管理科学与工程","Teece","2007","Explicating Dynamic Capabilities","动态能力框架"],["国际商务","Dunning","1988","The Eclectic Paradigm of International Production","OLI 折衷范式"]],"note":"全部为公开经典文献，按「作者＋年份＋标题」可直接在 Google Scholar 或知网检索原文。阅读顺序建议：先读综述（Healy & Wahlen 1999 一类）建立地图，再读奠基文献，最后读近三年顶刊。"},{"name":"10_学术_研究方法","title":"④ 常见研究方法：18 种，含适用场景、工具与常见错误","headers":["研究方法","主要适用学科","适用场景","常用实现工具","最常见的错误"],"rows":[["事件研究法","金融","政策发布、财报公告、并购重组的市场反应","Stata（eventstudy2）、Python","事件窗口选择随意，未排除同期其他事件"],["Fama-MacBeth 回归","金融","截面定价因子检验、风险溢价估计","Stata、R","忽略截面相关性，标准误低估"],["组合排序分析","金融","按特征分组的收益差，检验因子有效性","Stata、Python","分组切点与加权方式影响结论"],["结构模型估计","金融 / 经济","反事实分析与政策模拟","MATLAB、Stata","函数形式假设强，识别依赖外生变异"],["双重差分（DID）","经济 / 财政 / 会计","政策评估，需处理组与对照组","Stata（reghdfe / csdid）、R","平行趋势不检验；异质性处理效应下 TWFE 有偏"],["工具变量（IV）","经济 / 财政","内生性处理，需有效外生工具","Stata（ivreg2）、R","工具变量不满足排他性约束"],["断点回归（RDD）","经济 / 财政","按阈值决定处理的政策（分数线、年龄线）","Stata（rdrobust）、R","带宽选择敏感，操纵检验未做"],["合成控制法","经济","单一地区或个体的政策效果","Stata（synth）、R"," donor pool 选择影响结果，安慰剂检验不足"],["随机对照实验（RCT）","经济 / 行为","因果识别金标准，需随机分组","oTree、R","外部有效性差， attrition 偏差"],["档案式研究","会计","大样本财务与治理数据的关系检验","Stata、Python","内生性处理不足，仅做相关性描述"],["实验研究","会计 / 行为","被试决策行为，需实验室或在线平台","oTree、Z-tree","样本以学生为主，外部效度弱"],["分析式模型","会计 / 管工","理论推导，给出可检验命题","Mathematica、手推","假设脱离现实，命题无法检验"],["优化建模","管工","库存、调度、路径、定价决策","Gurobi、CPLEX、Python","参数估计粗糙，忽略不确定性"],["离散事件仿真","管工","排队系统、供应链动态","Arena、FlexSim、SimPy","仿真结果不可复现（随机种子未固定）"],["文本分析与 NLP","会计 / 金融 / 管工","年报语调、政策文本、舆情情绪","Python（jieba、BERT）、R","词典法与时序漂移；模型不可解释"],["机器学习预测","金融 / 统计","违约预测、收益预测、因子挖掘","Python（scikit-learn、LightGBM）","过拟合与数据窥探；样本外表现衰减"],["问卷与量表","管理 / 国际商务","难以观测的构念（信任、满意度）","SPSS、AMOS、SmartPLS","共同方法偏差；信效度检验不全"],["案例研究","国际商务 / 管工","机制解释与理论构建","NVivo、访谈转录","样本代表性弱，难以推广"]],"note":"因果推断类方法（DID / IV / RDD / 合成控制 / RCT）已成为经管主流，审稿对识别策略的要求高于对结果显著性的要求。「最常见的错误」一列是审稿意见的高频出处。"},{"name":"11_学术_数据库工具","title":"⑤ 数据库和研究工具：16 个数据库 + 10 个工具","headers":["类型","名称","覆盖范围","用途与说明"],"rows":[["数据库","CSMAR 国泰安","中国","A 股上市公司财务、股价、治理、基金、审计数据；国内研究的基本盘"],["数据库","CNRDS 中国研究数据服务平台","中国","ESG 评级、文本数据、专利、绿色金融等特色库"],["数据库","Wind 万得","中国 + 全球","宏观、行业、债券、基金、公司公告；城投债研究必备"],["数据库","CNKI 中国知网","中国","中文文献、年鉴、统计资料；做文献综述的第一站"],["数据库","CFPS 中国家庭追踪调查","中国","家庭收入、消费、教育、健康微观面板"],["数据库","CHFS 中国家庭金融调查","中国","家庭资产配置、负债、金融素养"],["数据库","CHIP 中国家庭收入项目","中国","收入分配与劳动经济学经典微观数据"],["数据库","CEIC 中国经济数据库","中国 + 全球","宏观时间序列，跨国比较方便"],["数据库","国家统计局 / 各部委年鉴","中国","官方口径基础数据，政策文件与统计公报"],["数据库","WRDS（含 CRSP、Compustat）","全球","美股与全球公司财务数据，做国际比较必需"],["数据库","Bloomberg 终端","全球","实时行情、债券、汇率、新闻；多数高校图书馆有终端"],["数据库","World Bank / IMF / OECD","全球","跨国宏观与发展指标，公开免费"],["数据库","中国裁判文书网 / 处罚决定书","中国","法律与监管事件研究的一手来源"],["数据库","国家自然科学基金 / 社科基金项目库","中国","查在研项目、课题组与经费"],["数据库","SSRN / NBER Working Paper","全球","预印本与工作论文，跟进前沿最快"],["数据库","国家知识产权局专利数据库","中国","专利用于衡量创新产出"],["软件工具","Stata","—","经管实证的标准工具：回归、面板、DID、IV、RDD 命令齐全"],["软件工具","R","—","统计与可视化，包生态最全（tidyverse、fixest、ggplot2）"],["软件工具","Python","—","数据处理与机器学习（pandas、scikit-learn、statsmodels）"],["软件工具","MATLAB","—","结构模型、数值求解、优化"],["软件工具","Gurobi / CPLEX","—","大规模整数规划与优化求解器"],["软件工具","oTree / Z-tree","—","实验经济学与行为实验平台"],["软件工具","NVivo","—","质性资料编码与案例研究"],["软件工具","LaTeX / Overleaf","—","论文排版，公式与参考文献管理"],["软件工具","Zotero / EndNote","—","文献管理与引用格式"],["软件工具","Git / GitHub","—","代码与数据版本管理，复现研究的基础"]],"note":"国内研究以 CSMAR + CNRDS + Wind 为基本盘；做美股或跨国比较需 WRDS 或 Bloomberg 权限，多数高校图书馆可申请账号。数据获取成本往往是选题的第一约束。"},{"name":"12_学术_典型问题","title":"⑥ 典型研究问题：30 个可开题的问题，配方法、数据与难度","headers":["学科","研究问题","识别策略 / 方法","可用数据","难度"],"rows":[["金融学","A 股动量与反转的方向为何与美股相反？","组合排序 + Fama-MacBeth","CSMAR 股价与财务","中"],["金融学","注册制改革如何影响 IPO 定价效率与抑价率？","DID（改革前后 + 板块对照）","CSMAR IPO 数据","中"],["金融学","ESG 评级已被市场定价，还是仅影响资金流？","事件研究 + 因子回归","CNRDS ESG + CSMAR","中"],["金融学","公募基金业绩是否可持续？选股与择时各贡献多少？","面板回归 + Bootstrap","CSMAR 基金持仓","中高"],["金融学","雪球类产品的对冲行为如何影响标的波动？","高频事件研究 + 持仓推断","期权与期货高频数据","高"],["经济学","最低工资上调对就业的净效应（中国版 Card-Krueger）","DID + 断点","CHIP、CFPS","中"],["经济学","高铁开通对区域经济收敛的作用","DID / 合成控制","城市统计年鉴、CEIC","中"],["经济学","高校扩招的教育回报率与技能错配","IV（政策冲击作工具）","CGSS、CFPS","中"],["经济学","产业补贴是否提升了企业全要素生产率？","PSM + DID","CSMAR + 政府补贴明细","中"],["经济学","平台「二选一」行为的福利效应","结构模型 + 反事实","平台数据、处罚决定书","高"],["经济学","碳交易试点是否真的降低了排放？","DID + 合成控制","CEADs、企业排放数据","中"],["经济学","数字普惠金融如何影响农村家庭创业？","面板 + IV","北大数字普惠金融指数、CFPS","中"],["会计学","新收入准则对盈余管理方式的影响","DID（准则实施前后）","CSMAR 财务报表","中"],["会计学","事务所强制轮换是否真的提高审计质量？","面板 + IV","CSMAR 审计意见与事务所","中"],["会计学","关键审计事项（KAM）披露是否具有信息含量？","事件研究 + 文本分析","年报 KAM 段文本","中高"],["会计学","ESG 披露是否存在同行业溢出效应？","空间计量 / DID","CNRDS ESG 披露","中高"],["会计学","MD&A 语调对未来业绩的预测能力","文本分析 + 回归","年报 MD&A、CSMAR","中"],["会计学","内控缺陷披露的市场反应与后续修复","事件研究","CSMAR 内控数据","低"],["财政学","增值税留抵退税的政策效果与企业行为","DID","税务年鉴 + CSMAR","中"],["财政学","地方债务扩张对财政可持续性的影响","面板 + 门槛模型","Wind 城投债、财政年鉴","中高"],["财政学","个税专项附加扣除的再分配效应","微观模拟","CFPS、税收统计","中高"],["财政学","社保降费如何影响企业用工与投资？","DID","工业企业数据库、CSMAR","中"],["财政学","省以下财政体制对地方支出结构的影响","面板 + 断点","省级与地市财政数据","中"],["统计学","高维变量选择在信用评分中的应用","Lasso / 弹性网","信贷数据、模拟数据","中"],["统计学","波动率模型对极端行情的预测能力","GARCH 族 + 机器学习","高频行情数据","中高"],["统计学","异质性处理效应的识别与估计","因果森林 / 局部 LATE","实验或准实验数据","高"],["统计学","缺失数据的多重插补与敏感性分析","MICE / 模式混合模型","调查数据","中"],["管理科学与工程","供应链中断风险下的库存与备份策略","随机优化 / 仿真","企业调研、行业数据","高"],["管理科学与工程","数字化转型如何影响企业绩效？","文本分析 + 面板回归","年报文本、CSMAR","中"],["管理科学与工程","共享经济平台的动态定价与匹配效率","动态定价模型 + 实证","平台运营数据","高"]],"note":"问题的价值在于「能不能做」：有数据、有识别策略、有反事实，三者缺一就只是设想。难度列为相对判断：低＝本科毕业论文可完成，中＝硕士论文，高＝博士论文或期刊投稿。"},{"name":"13_学术_课题组项目","title":"⑦ 相关课题组和公开科研项目：10 条检索渠道","headers":["渠道","入口","可查字段","使用说明"],"rows":[["国家自然科学基金委项目查询","isisn.nsfc.gov.cn（项目查询）","项目名称、负责人、依托单位、经费、起止年月、成果列表","管理科学部（G）、数理科学部（A）与经管研究最相关；可按学科代码逐年筛"],["国家社科基金项目数据库","全国哲学社会科学工作办公室官网","项目名称、类别（重大/重点/一般/青年）、负责人、学科分类","理论经济、应用经济、管理学三个门类；重大项目名单可看国家关注方向"],["教育部人文社科研究项目","教育部社会科学司","项目类别、负责人、依托单位、学科","青年项目覆盖面最广，是青年教师的主力来源"],["各校学院师资主页","学院官网「师资队伍」栏目","教师研究方向、在研项目、近三年论文、招生偏好、联系方式","最直接的信息源，能看到项目库里没有的「今年招不招」"],["Google Scholar / 知网学者库","scholar.google.com、cnki.net","论文列表、合作网络、被引次数、研究主题演化","用来看一个方向近三年谁最活跃、团队怎么组合"],["基金论文标注反查","知网检索结果页的基金标注","论文致谢中的基金号 → 反查项目与负责人","从论文反推项目比从项目找论文更高效"],["学术会议议程","AFA、EFA、中国金融学年会、中国经济学年会官网","入选论文标题、作者单位、评论人","看谁在做什么、哪些题目正在被讨论，是找前沿最快的途径"],["预印本与工作论文平台","SSRN、arXiv（q-fin）、NBER、中国经济学家论坛","最新工作论文全文与作者","正式发表前 1—3 年就能看到，跟进前沿必备"],["学院「学术活动」页","各校经管学院官网的讲座/工作坊栏目","讲座题目、主讲人、时间地点","很多讲座对外开放，是接触导师成本最低的方式"],["课题组 / 实验室主页","教师个人主页或实验室网站","在研课题、组内成员、毕业生去向、招生说明","判断一个组是否适合自己：看毕业生去向比看导师头衔更实在"]],"note":"本表给的是「怎么查」，不是项目清单——项目级信息按校按年变化，任何静态清单半年就失效。查课题组时应同时看三件事：在研项目、近三年论文、在读博士生数量。"},{"name":"14_学术_成果评价","title":"⑧ 学术成果评价方式：8 个评价维度","headers":["维度","内容","说明与注意事项"],"rows":[["国际期刊分级","UTD24 / FT50 为商学院通行的高水平期刊清单，金融三大刊为 JF、JFE、RFS","UTD24 偏管理信息系统与运筹，FT50 偏综合商学院；金融学以三大刊为准"],["中文期刊分级","各校自定 A 类/B 类目录，通行的顶级为《经济研究》《管理世界》《金融研究》《会计研究》","目录校际差异大，求职前必须查目标院校的认定文件"],["JCR 分区与影响因子","按影响因子四分位（Q1—Q4），中科院分区另有大小类划分","金融与会计期刊影响因子普遍偏低，不能与自然科学横向比；分区仅作参考"],["CSSCI / 北大核心","中文社科索引，是职称评审的基础门槛","南大 CSSCI 与北大核心口径不同，需按单位要求"],["会议论文","AFA、AEA、中国金融学年会等年会入选本身即一种认可","经管学科会议论文不计入主要成果，但与期刊发表同等重视其交流价值"],["专著与教材","国家级规划教材、学术专著在评审中计分","周期长、引用低，但对学科建设与教学岗重要"],["政策报告与社会影响","获省部级以上领导批示、被政策文件采纳可折算成果","智库型高校（如财政、审计方向）越来越看重这一项"],["代表作制度（破五唯）","从「数数量」转向「看代表作」，多数 985 已实行 3—5 篇代表作评审","过渡期各校标准不一，实际执行中「顶刊 + 国家级项目」仍是硬通货"]],"note":"评价体系正在从「数量」转向「代表作」，但各校过渡进度不一。求职时应直接查目标院校的职称评审文件，而不是套用通用标准。"},{"name":"15_学术_职业路径","title":"⑨ 博士后及学术职业发展路径：8 条可能的去向","headers":["阶段 / 岗位","年限","关键产出","说明","考核节点"],"rows":[["博士在读","3—5 年（延期常见）","Job Market Paper ＋ 1—2 篇发表","国内 985 博士普遍要求 1—2 篇 CSSCI 或 1 篇 SSCI 才能毕业","学位论文答辩 + 发表要求"],["师资博士后","2—3 年","新增 1—2 篇高水平论文、主持省部级项目","介于博士与教师之间，多数高校用它作为留校的考察期","出站考核，通过率约 50%—70%"],["预聘制（Tenure-track）","6 年（多数高校）","顶刊论文、国家级项目、教学工作量","非升即走的核心阶段，压力最大；不同学校要求差距极大","中期考核（3 年）+ 终期考核（6 年）"],["长聘副教授","聘期 3—6 年","持续发表、主持国家级项目、指导研究生","拿到长聘即进入相对稳定期，考核压力明显下降","聘期评估（教学 + 科研 + 服务）"],["教授","—","学科方向带头人、重大项目、团队建设","评审看代表作与学术影响力，指标转向「领域内地位」","职称评审（学院 + 学部 + 学校三级）"],["讲师 / 教学为主岗","聘期 3 年，可续","教学质量评价、教材、教改论文","科研要求低、教学任务重，适合以教学为志业者","教学工作量 + 学生评教 + 教改成果"],["专职研究员","聘期 2—3 年","课题报告、政策建议、论文","非教职序列，不承担教学，依附于课题组或智库","项目结项与经费执行"],["业界研究岗","—","研究报告、行业分析、模型产品","券商研究所、基金研究部、智库、咨询公司；博士转业界的主要出口","市场化考核（报告数量、荐股表现、客户评价）"]],"note":"国内 985 高校普遍实行预聘长聘制，6 年考核不通过即离校。选择学术道路前应确认目标院校的考核标准与近年通过率——这比学校排名更能决定实际体验。"}];
-const GROUPS = [["国际升学数据库", "第 3 部分 · 8 个字段", ["01_国际_国家地区", "02_国际_院校项目", "03_国际_申请时间线", "04_国际_奖学金", "05_国际_毕业去向", "06_国际_学位政策"]], ["学术研究数据库", "第 4 部分 · 9 个字段", ["07_学术_学科方向", "08_学术_细分主题", "09_学术_经典文献", "10_学术_研究方法", "11_学术_数据库工具", "12_学术_典型问题", "13_学术_课题组项目", "14_学术_成果评价", "15_学术_职业路径"]]];
-
+const DB = [{"name":"01_国际_国家地区","title":"① 国家和地区：10 个目的地的完整对比","headers":["国家/地区","主流学制","学费（当地货币）","人民币估算","语言门槛","毕业后工作签证","生活成本（年）","认证与政策","适合人群","验证状态"],"rows":[["英国","1 年为主","£25,000—40,000","23—37 万元","IELTS 6.5—7.0（单项 6.0—6.5）","Graduate Route 2 年（博士 3 年）","12—18 万元","留服认证；上海前 50 院校可直接落户","想一年拿学位、预算 45—55 万、接受高强度课程","▲ 未取得原文"],["美国","1—2 年","$50,000—80,000/年","36—58 万元/年","TOEFL 100+ / IELTS 7.0+","OPT 12 个月（STEM 延至 36 个月）","15—25 万元","留服认证；H-1B 需抽签","数理基础强、目标投行或科技公司、预算充足","▲ 未取得原文"],["中国香港","1 年","HK$300,000—500,000","27—45 万元","IELTS 6.5—7.0","IANG 12 个月，续签需受雇","10—15 万元","留服认证；粤港澳大湾区人才政策","想离家近、成本可控、毕业后留港工作","▲ 未取得原文"],["新加坡","1—1.5 年","S$70,000—80,000","37—43 万元","IELTS 7.0 / TOEFL 100","EP 按 COMPASS 计分，金融业门槛更高","12—18 万元","留服认证；公立大学认可度最高","目标亚太金融中心、能接受高学费","● 官网原文"],["澳大利亚","1.5—2 年","A$45,000—60,000/年","21—28 万元/年","IELTS 6.5—7.0","485 签证 2—4 年（按学历层级）","10—15 万元","留服认证；技术移民通道","想留海外工作、有移民意向","▲ 未取得原文"],["加拿大","1—2 年","C$30,000—55,000/年","16—29 万元/年","IELTS 6.5—7.0","PGWP 1—3 年，移民主要通道","8—12 万元","留服认证；移民政策友好","预算敏感、以移民为长期目标","▲ 未取得原文"],["荷兰","1 年","€18,000—25,000","14—20 万元","IELTS 6.5—7.0","zoekjaar 求职年 1 年","8—12 万元","留服认证","追求性价比、英语授课、欧洲就业","▲ 未取得原文"],["法国","1—2 年（高商）","€15,000—25,000","12—20 万元","IELTS 6.5 / TCF B2","APS 求职签证 1 年","8—12 万元","留服认证；高商在金融圈认可度高","预算有限但想去欧洲高商","▲ 未取得原文"],["日本","2 年","¥800,000—1,500,000/年","4—7 万元/年","JLPT N1 或英语项目","特定活动签证，就职可换工作签","6—10 万元","留服认证","日语好、成本敏感、目标日资或中资驻日","▲ 未取得原文"],["韩国","2 年","₩8,000,000—15,000,000/年","4—8 万元/年","TOPIK 4+ 或英语项目","D-10 求职签证","6—9 万元","留服认证","韩语好、成本敏感","▲ 未取得原文"]],"note":"学费仅指项目学费，不含生活费与保险。人民币估算按 1 GBP≈9.2、1 USD≈7.2、1 HKD≈0.92、1 SGD≈5.35、1 AUD≈4.7、1 EUR≈7.8、1 JPY≈0.048、1 KRW≈0.0053；实际按当日汇率折算。"},{"name":"02_国际_院校项目","title":"②③④ 高校学院专业 · 项目学制及学费 · GPA／语言／科研要求（16 个项目）","headers":["院校","学院","项目","地区","学制","学费","语言要求","GPA／科研／其他要求","申请轮次与时间","官方页面","验证状态","核验说明"],"rows":[["新加坡国立大学 NUS","商学院","MSc Finance","新加坡","1 年","S$71,200（不含 GST）／S$77,608（含 9% GST）","IELTS 7.0 / TOEFL 100","相关本科背景；GMAT/GRE 建议提交","2027 年 8 月入学；申请费 S$100、接受费 S$10,900、两期各 S$33,354","mscfin.nus.edu.sg/programme-fees","● 官网原文","已抓取费用页（2027 学年）"],["南洋理工大学 NTU","南洋商学院 NBS","MSc Finance","新加坡","1 年（3 学期，8 月—次年 5 月）","S$78,480（含 9% GST 与注册费）","TOEFL/IELTS（本科非英语授课者需提交）","良好本科学位，不限专业；GMAT/GRE 可选；无需工作经验","R1 11/30、R2 1/31、R3 3/31；滚动录取，建议早申；申请费 S$100","ntu.edu.sg/education/graduate-programme/master-of-science-in-finance","● 官网原文","已抓取项目页（2027 入学）"],["香港大学 HKU","商学院","Master of Finance","中国香港","1—2 年","HK$400,000—500,000","IELTS 6.5（单项 5.5）/ TOEFL 80","相关背景；GMAT/GRE 建议；部分方向偏好工作经验","多轮录取，首轮约 10 月开放","business.hku.hk/programmes/postgraduate/master-of-finance","▲ 未取得原文","站点连接超时，数字为公开区间"],["香港中文大学 CUHK","商学院","MSc in Finance","中国香港","1 年","HK$350,000—450,000","IELTS 6.5 / TOEFL 79","相关背景；GMAT/GRE 建议提交","多轮，滚动录取","mfin.bschool.cuhk.edu.hk","▲ 未取得原文","页面 JS 渲染，未取到正文"],["香港科技大学 HKUST","商学院","MSc in Finance","中国香港","1 年","HK$400,000 左右","IELTS 6.5（单项 5.5）/ TOEFL 80","量化背景优先；GMAT/GRE 建议","多轮，首轮约 9—10 月","bm.ust.hk/msc-finance","▲ 未取得原文","页面 JS 渲染，未取到正文"],["香港理工大学 PolyU","会计及金融学院","MSc in Finance (Investment Management)","中国香港","1 年","HK$300,000—380,000","IELTS 6.0 / TOEFL 80","相关背景；工作经验加分","滚动录取，先到先审","polyu.edu.hk/af/study/pg","▲ 未取得原文","未抓取，区间参考"],["伦敦政治经济学院 LSE","金融系","MSc Finance","英国","1 年","£45,000 左右","IELTS 7.0（单项 6.5）","二等一荣誉学位以上；GMAT 建议 700+；量化背景","滚动录取，招满即止，建议 11 月前提交","lse.ac.uk/finance","▲ 未取得原文","官网 URL 调整，多轮 404"],["帝国理工学院 Imperial","商学院","MSc Finance","英国","1 年","£45,000 左右","IELTS 7.0（单项 6.5）","量化背景强；GMAT 建议提交","分轮录取，首轮约 10 月","imperial.ac.uk/business-school/master/finance","▲ 未取得原文","页面未返回正文"],["伦敦大学学院 UCL","管理学院","MSc Finance","英国","1 年","£38,000—42,000","IELTS 7.0（单项 6.5）","相关背景；部分方向要求 GMAT","分轮，首轮约 10 月","ucl.ac.uk/prospective-students/graduate","▲ 未取得原文","未抓取，区间参考"],["华威大学 Warwick","华威商学院 WBS","MSc Finance","英国","1 年","£38,000 左右","IELTS 7.0（两项 6.0/6.5）","相关本科背景；GMAT 非强制但建议","滚动录取，招满即止","warwick.ac.uk/study/postgraduate/courses","▲ 未取得原文","课程页 404"],["曼彻斯特大学 Manchester","Alliance MBS","MSc Finance","英国","1 年","£35,000 左右","IELTS 7.0（单项 6.5）","相关背景；均分 80—85 以上","分轮录取","alliancembs.manchester.ac.uk/study/masters","▲ 未取得原文","页面 JS 渲染"],["爱丁堡大学 Edinburgh","商学院","MSc Finance","英国","1 年","£33,000—38,000","IELTS 7.0（单项 6.5）","相关背景；均分 85 以上","分轮，首轮约 10 月","ed.ac.uk/studying/postgraduate","▲ 未取得原文","未抓取，区间参考"],["墨尔本大学 Melbourne","商学院","Master of Finance","澳大利亚","1.5—2 年","A$50,000/年 左右","IELTS 6.5（单项 6.0）","相关背景可申请学分减免","两季入学（2 月/7 月）","study.unimelb.edu.au/find/courses/graduate","▲ 未取得原文","Cloudflare 403 拦截"],["悉尼大学 Sydney","商学院","Master of Commerce (Finance)","澳大利亚","1.5—2 年","A$52,000/年 左右","IELTS 7.0（单项 6.0）","相关背景；均分 65%+","两季入学","sydney.edu.au/courses","▲ 未取得原文","未抓取，区间参考"],["多伦多大学 Toronto","Rotman 商学院","Master of Finance","加拿大","1—2 年","C$55,000 左右","IELTS 7.0 / TOEFL 100","相关背景；部分要求 2 年工作经验","分轮录取","rotman.utoronto.ca","▲ 未取得原文","未抓取，区间参考"],["巴黎高等商学院 HEC","HEC Paris","MSc in Finance","法国","1—2 年","€25,000—30,000","IELTS 7.0 / TOEFL 100","GMAT 建议 700+；数理背景优先","分轮，首轮约 10 月","hec.edu/en/master-s-programs","▲ 未取得原文","未抓取，区间参考"]],"note":"绿底两行为已抓取官网原文（NUS 2027 学年费用页、NTU 2027 入学项目页）。其余 14 项在抓取时分别遇到超时、SSL 拦截、Cloudflare 403、404、JS 渲染，数字为公开量级区间——报考前请点开「官方页面」列逐项核对。"},{"name":"03_国际_申请时间线","title":"⑤ 申请时间和材料：从大二到行前的 9 个阶段","headers":["阶段","时间窗","核心任务","需要准备的材料","常见坑"],"rows":[["大二上—大二下","2 年准备期的起点","把均分刷到 85 以上；启动雅思/托福备考（有效期 2 年，别太早考）","中英文成绩单、在读证明","大一绩点挖的坑很难补——GPA 是唯一没法用文书弥补的指标"],["大二暑假","第一份实习","券商/银行/四大实习，为文书积累可写的素材","实习证明、实习推荐人意向","与申请方向无关的实习在文书里等于白写"],["大三上","语言 + 标化","雅思 7.0 或托福 100；申美国/香港建议 GMAT 700+ 或 GRE 320+","雅思/托福成绩单、GMAT/GRE 成绩单","语言成绩有效期 2 年，大三上考出的成绩刚好覆盖申请季"],["大三下","锁定推荐人与文书初稿","确定 3 位推荐人（2 学术 + 1 实习）；写个人陈述初稿","推荐信、PS 初稿、简历（CV）","推荐人要能说出你的具体细节，头衔大但不了解你等于减分"],["大三暑假","第二份实习 + 定校","补充一段相关实习；确定 6—8 所目标校（冲刺/匹配/保底各 2—3 所）","实习证明、选校清单、各校文书素材表","只冲梦校不留保底，是最常见的翻车原因"],["大四上 9—10 月","首轮申请（命中率最高）","港新英多为滚动录取，首轮名额最多，尽早提交","完整材料包：PS、CV、成绩单、语言成绩、推荐信 2—3 封、申请费","拖到截止日当天提交，系统崩溃的例子每年都有"],["大四上 11—12 月","补申与面试","补申第二轮；准备 video interview / Kira 面试","面试题库、Kira 平台测试","面试不准备，口语现场崩盘，前面材料再好也白搭"],["大四下 1—4 月","offer 比较与押金","横向比较 offer（费用、就业、签证）；缴押金锁位","录取函、押金汇款凭证","押金通常为学费的 10%—20%，交了不退"],["大四下 5—8 月","签证与行前","办学生签证、订宿舍、体检、换汇","存款证明（覆盖 1 年费用）、录取函、体检报告、机票、住宿确认","英国存款证明需连续存满 28 天，临时抱佛脚会被拒签"]],"note":"时间轴按「大四毕业当年 9 月入学」倒推。若目标美国项目，截止日普遍更早（12 月—1 月），整体需再提前 1—2 个月；若目标是春季入学，则整体后移半年。"},{"name":"04_国际_奖学金","title":"⑥ 奖学金与资金支持：12 类资金来源","headers":["项目名称","类型","覆盖范围与金额","适用对象","申请时间","难度","关键限制"],"rows":[["国家留学基金委 CSC 国家公派","政府（中国）","生活费 + 一次往返机票；部分项目含学费","博士为主，硕士名额极少","每年 1—3 月","高","应届本科生基本只能申博士项目，硕士几乎无门"],["志奋领 Chevening","政府（英国）","全额：学费 + 生活费 + 往返机票","需 2 年以上工作经验","每年 8—11 月","高","应届生不符合资格，工作几年后才有机会"],["香港博士奖学金 HKPFS","政府（香港）","每年 HK$331,200 + 会议差旅津贴","博士申请者","每年 9—12 月","极高","需提前联系导师并获得院系提名"],["新加坡 MOE 服务义务计划","政府（新加坡）","学费补贴（约为国际生学费的 40%—60%）","公立大学录取者","随录取申请","中","代价是毕业后须在新加坡工作 3 年"],["NUS / NTU 项目奖学金","院校","学费 10%—50% 减免","学术成绩优异者","随 offer 自动评定","中","无需单独申请，但金额普遍不大"],["港校入学奖学金","院校","HK$50,000—150,000 一次性","GPA 与 GMAT 双高","随 offer 自动评定","中","部分院校需在申请表中勾选申请"],["澳洲 IPRS 国际研究生奖学金","政府（澳大利亚）","全额学费 + 生活费 + 保险","研究型学位（MPhil/PhD）","随申请","高","授课型硕士不适用"],["加拿大 Vanier 博士奖学金","政府（加拿大）","每年 C$50,000，最长 3 年","博士","每年 8—11 月","极高","需院校内部提名，竞争全球名额"],["法国埃菲尔 Excellence 奖学金","政府（法国）","每月 €1,181 + 机票 + 保险","硕士与博士","每年 1 月截止","高","必须由录取院校提名，个人不能直接申请"],["荷兰 Orange Tulip 奖学金","政府 + 院校","学费 25%—100% 减免","中国籍申请者","每年 2—4 月","中","仅适用参与该项目的特定院校与专业"],["日本 MEXT 国费奖学金","政府（日本）","全额学费 + 每月 ¥143,000—145,000","硕士与博士","使馆推荐（前一年 4—5 月）或院校推荐","高","需提前一年启动，语言要求高"],["院校 Merit-based 入学奖","院校","学费 10%—30% 减免","所有被录取者","随 offer 自动评定","低—中","最常见的一类，但覆盖金额小，主要起象征作用"]],"note":"对应届本科生而言，现实可及的主要是「院校 Merit-based」与「NUS/NTU 项目奖」；CSC 硕士通道、志奋领、Vanier 等大多要求工作经验或博士身份。"},{"name":"05_国际_毕业去向","title":"⑦ 毕业去向和就业信息：10 个目的地的就业面","headers":["国家/地区","典型雇主","主流岗位","起薪区间","工作签证与留用","回国认可度"],"rows":[["英国","四大、投行中后台、咨询公司、中资银行伦敦分行","审计、风控、财务分析、合规","£30,000—45,000/年","Graduate Route 2 年（博士 3 年），无需雇主担保","高（G5 与 WBS/LSE 尤甚）"],["美国","投行、资产管理、科技公司财务部、咨询","IB analyst、quant、corporate finance、consulting","$80,000—120,000/年","OPT 12 个月（STEM 36 个月），H-1B 需抽签","极高"],["中国香港","投行、资产管理、家族办公室、四大、中资券商","IB analyst、equity research、audit、risk","HK$25,000—40,000/月","IANG 12 个月，续签需受雇","极高（与内地招聘池完全打通）"],["新加坡","DBS、OCBC、UOB、GIC、淡马锡、中资券商新加坡分部","corporate banking、risk、asset management","S$5,000—7,500/月","EP 按 COMPASS 计分，金融业薪资门槛更高","高"],["澳大利亚","四大、四大行、中资企业澳洲分部","audit、tax、financial planning、credit analysis","A$65,000—85,000/年","485 签证 2—4 年，可转技术移民","中高"],["加拿大","五大行、保险公司、会计师事务所","financial analyst、audit、risk","C$60,000—80,000/年","PGWP 1—3 年，是移民主通道","中高"],["荷兰","ING、ABN AMRO、四大、贸易与物流企业","risk、treasury、audit","€40,000—55,000/年","zoekjaar 求职年 1 年","中"],["法国","BNP Paribas、Société Générale、四大、中资驻法机构","market risk、audit、corporate finance","€38,000—50,000/年","APS 求职签证 1 年","中（高商毕业生认可度更高）"],["日本","野村、大和、三菱 UFJ、中资驻日机构","research、sales、back office","¥4,500,000—6,000,000/年","特定活动签证，就职后可换工作签证","中"],["韩国","三星证券、未来资产、KB 金融集团","research、IB、risk","₩40,000,000—55,000,000/年","D-10 求职签证","中"]],"note":"起薪为应届金融硕士的公开量级区间，不含奖金；各地税负与生活成本差异大，比较时应看税后可支配收入而非税前数字。"},{"name":"06_国际_学位政策","title":"⑧ 学位认可及政策信息：12 项必须提前弄清的事","headers":["事项","内容","适用条件","办理渠道","注意事项"],"rows":[["国（境）外学历学位认证","教育部留学服务中心认证，是考公、落户、国企入职的前提","所有境外正规院校学历","cscse.edu.cn → 服务大厅（在线办理）；院校是否在认证范围查 yxcx.cscse.edu.cn/rzyxmd","认证不是「交了材料就通过」：留服中心可对部分院校启动加强审查、对已发证书作失效处置、甚至暂停某校申请（官网 2025 年已发多份此类公告）。选校前先查认证院校名单与公告，排名再高但不在名单内，回国无法用于考公落户。"],["上海落户（世界前 50 院校）","可直接落户，无社保基数与缴纳时长要求","QS/THE/USNews/软科四大榜单前 50","上海市人社局一网通办","排名按毕业当年的四大榜单认定，须在回国 2 年内来沪工作"],["上海落户（51—100 院校）","缴满 6 个月社保即可申请落户","四大榜单 51—100","上海市人社局一网通办","社保基数需达到当年 1 倍以上"],["北京落户","硕士以上 + 留服认证 + 连续缴纳社保，通过用人单位指标申请","原则上 45 岁以下","北京市人社局","指标紧张，关键在单位是否有落户名额"],["深圳落户","境外硕士可直接落户，部分区另有租房与生活补贴","境外硕士及以上","深圳市人社局","补贴标准按区不同，需落户后申请"],["广州落户","境外硕士可直接落户，需档案调入","境外硕士及以上","广州市人社局","档案不调入会影响后续职称评定"],["免税车指标","留学生购国产车免征购置税与进口零部件关税","境外学习满 1 年、回国 1 年内","海关总署指定代办机构","车型有限且须在回国 1 年内办理，过期作废"],["创业扶持","各地留学人员创业园提供启动资金、场地减免与贷款贴息","有落地创业项目","当地人社局 / 留学人员创业园","需入驻园区并满足考核要求"],["公务员报考资格","认证后可按应届生或社会人员报考，部分岗位单设「海外留学人员」","已完成留服认证","国考 / 省考公告","专业名称须与岗位目录对应，认证书上的专业名常与岗位不符"],["职称评定","认证学历可作为职称评审的学历依据","已认证学历","当地人社部门","部分职称系列还需业绩与继续教育学时"],["高校教职通道","境外博士可走「海外优青」等人才通道，待遇与启动经费更优","境外博士，成果突出","各校人事处 / 国家自然科学基金委","一般要求博士毕业 3 年内且未回国工作，时间窗口紧"],["认证材料清单","毕业证、成绩单、护照、签证页、出入境记录（按提示逐项上传）","所有认证申请者","cscse.edu.cn 在线系统","全程网办无需邮寄，但材料不全会退回重交，耗时 1—2 个月"]],"note":"政策年年调整，尤其落户的院校名单与社保基数。上表为通行口径，办理前必须以「办理渠道」列的官方入口核对当年文件——这是本表里最容易过期的一部分。"},{"name":"07_学术_学科方向","title":"① 学科研究方向：8 个学科的完整版图","headers":["学科","学科门类","主要研究方向","代表期刊（中文 / 国际）","国内强校","主要就业出口","研究特征"],"rows":[["金融学","经济学","资产定价、公司金融、行为金融、市场微观结构、金融工程、数字金融、家庭金融","《金融研究》《管理世界》/ Journal of Finance、JFE、RFS","清华五道口、北大光华、上交高金、人大财金、央财金融","券商研究所、公募基金、银行总行、监管机构","以实证为主，结构模型与机器学习占比上升"],["经济学","经济学","微观理论、宏观经济学、计量经济学、产业组织、发展经济学、劳动经济学","《经济研究》《管理世界》/ AER、QJE、Econometrica","北大 CCER、清华经管、人大经济、复旦、上交安泰","政策研究、高校教职、国际组织、智库","理论建模与因果推断并重，识别策略是发表关键"],["会计学","管理学","财务会计、审计、管理会计、公司治理、信息披露、会计稳健性","《会计研究》《审计研究》/ JAR、JAE、TAR、RAST","厦门大学、上海财经、人大商学院、央财会计、中南财","会计师事务所、企业财务部、证监会与交易所","档案式实证为主，实验与文本分析增长快"],["财政学","经济学","公共品供给、税收政策、地方财政与债务、社会保障、政府预算绩效","《财政研究》《税务研究》/ Journal of Public Economics","央财财政税务、上财、人大财政金融、中南财、东北财","财税系统、发改委、财政科学研究院、智库","政策评估方法（DID/RDD）为主，微观模拟为辅"],["统计学","理学","数理统计、贝叶斯统计、高维统计、时间序列、金融统计与风险管理","《统计研究》/ JASA、Annals of Statistics、Biometrika","北大数学、人大统计、上财统计、厦大、东北师大","量化研究、风控建模、数据科学、生物统计","理论推导与计算方法并重，对数学基础要求最高"],["管理科学与工程","管理学","运筹优化、供应链管理、信息系统、决策分析、金融工程","《管理科学学报》《系统工程理论与实践》/ Management Science、Operations Research","清华经管、上交安泰、西交管理、华科、央财管工","管理咨询、供应链管理、互联网算法与策略","建模与算法为主，近年与机器学习深度结合"],["国际商务","管理学","跨国经营、国际贸易、全球供应链、跨境电商、对外直接投资","《国际贸易问题》《世界经济》/ Journal of International Business Studies","对外经贸大学、上财、央财、南开、中山大学","外贸企业、跨国公司在华机构、跨境电商","实证与案例并重，重视国别与制度差异"],["审计","管理学","审计质量、内部控制、政府审计、数据审计、审计定价","《审计研究》《会计研究》/ Auditing: A Journal of Practice & Theory","南京审计大学、央财、中南财、西南财","审计署与地方审计机关、事务所、企业内部审计","档案式实证与实验研究并重，近年数据审计方向升温"]],"note":"方向划分为该领域通行结构，不代表某一校培养方案的原文。国内强校按学科评估与近年发文情况排列，仅作参考。"},{"name":"08_学术_细分主题","title":"② 细分研究主题：40 个主题，每个配子问题与数据来源","headers":["学科","细分主题","可延伸的子问题","可用数据","代表文献"],"rows":[["金融学","资产定价与因子模型","A 股三因子的解释力有多强？动量与反转为何与美股相反？","CSMAR 股价与财务数据","Fama & French (1993)"],["金融学","公司金融与资本结构","注册制下 IPO 定价效率提升了多少？杠杆率如何影响投资？","CSMAR IPO 与财报","Modigliani & Miller (1958)"],["金融学","行为金融与投资者情绪","散户情绪如何影响换手率与波动？有限关注与公告反应","CSMAR 交易数据、百度指数","Shleifer & Vishny (1997)"],["金融学","市场微观结构与流动性","订单拆分与价格冲击的关系？做市商如何管理库存？","高频行情、逐笔委托","Kyle (1985)"],["金融学","金融工程与衍生品","期权隐含波动率的微笑形态？雪球产品的对冲成本","期权行情、中金所数据","Black-Scholes (1973)"],["金融学","数字金融与金融科技","移动支付如何影响家庭消费与创业？","CFPS、北大数字普惠金融指数","—"],["金融学","机构投资者与基金业绩","基金业绩是否可持续？抱团持股与崩盘风险","CSMAR 基金持仓","—"],["金融学","家庭金融与资产配置","房产是否挤出风险资产？金融素养与市场参与率","CHFS、CFPS","—"],["经济学","微观理论与机制设计","拍卖机制如何用于碳配额分配？","实验数据、政策文本","Samuelson (1947)"],["经济学","宏观经济增长","全要素生产率如何测算与分解？","Penn World Table、统计年鉴","Solow (1956)"],["经济学","计量方法与因果推断","LATE 的识别条件是什么？双重稳健估计的性质","模拟数据 + 观测数据","Angrist & Imbens (1994)"],["经济学","产业组织与反垄断","平台「二选一」的福利效应如何量化？","平台数据、处罚决定书","—"],["经济学","发展经济学","扶贫政策的长期效果能否持续？","CHIP、CFPS","Acemoglu et al. (2001)"],["经济学","劳动经济学","最低工资的就业效应？教育回报率的年代变化","CHIP、CGSS","—"],["经济学","区域与城市经济学","高铁的溢出效应有多大？城市规模与工资溢价","城市统计年鉴、CEIC","—"],["经济学","环境与能源经济学","碳交易试点是否真的减排？","CEADs、企业排放数据","—"],["会计学","财务会计与准则","新收入准则如何改变盈余的时间分布？","CSMAR 财务报表","Ball & Brown (1968)"],["会计学","审计质量与独立性","事务所强制轮换的效果？关键审计事项有信息含量吗？","CSMAR 审计意见与事务所","DeAngelo (1981)"],["会计学","盈余管理","真实活动盈余管理如何识别？","财报 + 现金流量表","Healy & Wahlen (1999)"],["会计学","公司治理","股权结构与大股东掏空的关系？","CSMAR 治理数据","Jensen & Meckling (1976)"],["会计学","信息披露与文本分析","MD&A 语调能否预测业绩？","年报文本 + NLP 工具","—"],["会计学","会计稳健性","条件稳健性与无条件稳健性如何区分？","财务报表数据","Basu (1997)"],["财政学","税收政策与企业行为","留抵退税的效果？企业避税与关联交易","税务年鉴、CSMAR","Ramsey (1927)"],["财政学","地方财政与债务","城投债的风险溢价如何定价？土地财政可持续吗？","Wind 城投债、财政年鉴","Qian & Weingast (1997)"],["财政学","社会保障","社保降费如何影响企业用工？养老金并轨的分配效应","人社部统计、CFPS","—"],["财政学","政府预算与绩效","预算绩效评价的指标体系怎么建？","财政年鉴、部门预算","Musgrave (1959)"],["财政学","财政联邦主义","省以下财政体制的激励效应？","省级财政数据","Oates (1972)"],["统计学","高维统计与变量选择","Lasso 在信用评分中的预测表现？","信贷数据、模拟数据","Tibshirani (1996)"],["统计学","时间序列与波动率建模","GARCH 族对极端行情的预测能力？","高频行情数据","Box & Jenkins (1970)"],["统计学","因果推断的统计基础","异质性处理效应如何识别与估计？","RCT 或准实验数据","Rubin (1974)"],["统计学","贝叶斯方法","先验选择对后验推断的影响有多大？","模拟 + 实证数据","—"],["统计学","金融统计与风险管理","VaR 与 ES 的估计精度比较？","行情数据、持仓数据","Hansen (1982)"],["管理科学与工程","运筹优化","供应链网络如何设计最省成本？","企业运营数据","—"],["管理科学与工程","供应链管理","牛鞭效应如何量化与缓解？","行业数据、企业调研","Lee et al. (1997)"],["管理科学与工程","信息系统与数字化","数字化转型对企业绩效的影响路径？","年报文本 + CSMAR","—"],["管理科学与工程","决策分析与博弈","平台补贴的最优策略是什么？","平台交易数据","Nash (1950)"],["国际商务","跨国公司与 FDI","外资进入模式如何选择？","商务部统计、企业年报","Dunning (1988)"],["国际商务","跨境电商与全球供应链","跨境电商如何降低中小企业出口门槛？","海关数据、平台数据","—"],["审计","国家审计与治理","审计全覆盖的政策效果如何评估？","审计署公告","—"],["审计","内部审计与风险控制","内控缺陷披露的市场反应？","CSMAR 内控数据","—"]],"note":"「可用数据」列是选题的第一道筛子：数据拿不到的方向，问题再漂亮也做不出来。建议按「数据 → 方法 → 问题」的顺序倒推选题。"},{"name":"09_学术_经典文献","title":"③ 经典理论和代表性文献：50 篇，可按作者＋年份检索","headers":["学科","作者","年份","标题","核心贡献与理论"],"rows":[["金融学","Markowitz","1952","Portfolio Selection","均值—方差组合理论，现代组合理论起点"],["金融学","Modigliani & Miller","1958","The Cost of Capital, Corporation Finance and the Theory of Investment","资本结构无关论（MM 定理）"],["金融学","Sharpe","1964","Capital Asset Prices: A Theory of Market Equilibrium under Conditions of Risk","资本资产定价模型（CAPM）"],["金融学","Black & Scholes","1973","The Pricing of Options and Corporate Liabilities","期权定价公式，衍生品定价基石"],["金融学","Jensen & Meckling","1976","Theory of the Firm: Managerial Behavior, Agency Costs and Ownership Structure","代理成本框架，公司治理研究基础"],["金融学","Ross","1977","The Determination of Financial Structure: The Incentive-Signalling Approach","信号理论解释资本结构"],["金融学","Grossman & Stiglitz","1980","On the Impossibility of Informationally Efficient Markets","信息有效市场悖论，奠定微观结构基础"],["金融学","Kyle","1985","Continuous Auctions and Insider Trading","做市商与知情交易者模型"],["金融学","Fama & French","1993","Common Risk Factors in the Returns on Stocks and Bonds","三因子模型"],["金融学","Shleifer & Vishny","1997","The Limits of Arbitrage","套利限制，行为金融的理论基础"],["经济学","Coase","1937","The Nature of the Firm","交易成本与企业边界"],["经济学","Samuelson","1947","Foundations of Economic Analysis","用数学系统化微观理论"],["经济学","Arrow & Debreu","1954","Existence of an Equilibrium for a Competitive Economy","一般均衡存在性证明"],["经济学","Solow","1956","A Contribution to the Theory of Economic Growth","新古典增长模型"],["经济学","Lucas","1976","Econometric Policy Evaluation: A Critique","卢卡斯批判"],["经济学","Kydland & Prescott","1982","Time to Build and Aggregate Fluctuations","真实经济周期，DSGE 传统"],["经济学","North","1990","Institutions, Institutional Change and Economic Performance","制度变迁理论"],["经济学","Angrist & Imbens","1994","Identification and Estimation of Local Average Treatment Effects","LATE，现代因果推断框架"],["经济学","Acemoglu, Johnson & Robinson","2001","The Colonial Origins of Comparative Development: An Empirical Investigation","制度与长期增长的因果识别"],["会计学","Ball & Brown","1968","An Empirical Evaluation of Accounting Income Numbers","会计盈余的信息含量，实证会计开山之作"],["会计学","Jensen & Meckling","1976","Theory of the Firm: Managerial Behavior, Agency Costs and Ownership Structure","代理成本引入会计与治理研究"],["会计学","Simunic","1980","The Pricing of Audit Services: Theory and Evidence","审计定价模型"],["会计学","DeAngelo","1981","Auditor Size and Audit Quality","审计质量与事务所规模"],["会计学","Watts & Zimmerman","1986","Positive Accounting Theory","实证会计理论三大假设"],["会计学","Basu","1997","The Conservatism Principle and the Asymmetric Timeliness of Earnings","会计稳健性度量"],["会计学","Dechow, Sloan & Sweeney","1995","Detecting Earnings Management","修正 Jones 模型，盈余管理检测标准"],["会计学","Healy & Wahlen","1999","A Review of the Earnings Management Literature and Its Implications for Standard Setting","盈余管理综述"],["会计学","Barth, Beaver & Landsman","2001","The Relevance of the Value Relevance Literature for Financial Accounting Standard Setting","价值相关性研究综述"],["财政学","Ramsey","1927","A Contribution to the Theory of Taxation","最优税制与逆弹性法则"],["财政学","Musgrave","1959","The Theory of Public Finance","公共财政三大职能框架"],["财政学","Tiebout","1956","A Pure Theory of Local Expenditures","用脚投票与地方公共品"],["财政学","Mirrlees","1971","An Exploration in the Theory of Optimum Income Taxation","信息不对称下的最优所得税"],["财政学","Oates","1972","Fiscal Federalism","财政联邦主义标准框架"],["财政学","Qian & Weingast","1997","Federalism as a Commitment to Preserving Market Incentives","中国式财政联邦主义"],["财政学","Besley & Coate","2003","Elected versus Appointed Regulators: Theory and Evidence","政治经济学与规制选择"],["统计学","Fisher","1922","On the Mathematical Foundations of Theoretical Statistics","极大似然与统计推断基础"],["统计学","Neyman & Pearson","1933","On the Problem of the Most Efficient Tests of Statistical Hypotheses","假设检验框架"],["统计学","Box & Jenkins","1970","Time Series Analysis: Forecasting and Control","ARIMA 建模方法论"],["统计学","Rubin","1974","Estimating Causal Effects of Treatments in Randomized and Nonrandomized Studies","潜在结果（反事实）框架"],["统计学","Hansen","1982","Large Sample Properties of Generalized Method of Moments Estimators","广义矩估计 GMM"],["统计学","Tibshirani","1996","Regression Shrinkage and Selection via the Lasso","Lasso 与变量选择"],["统计学","Breiman","2001","Random Forests","随机森林算法"],["管理科学与工程","Nash","1950","Equilibrium Points in N-Person Games","非合作博弈均衡存在性"],["管理科学与工程","Arrow, Harris & Marschak","1951","Optimal Inventory Policy","报童模型"],["管理科学与工程","Little","1961","A Proof for the Queuing Formula: L = λW","排队论 Little 定律"],["管理科学与工程","Porter","1980","Competitive Strategy","五力模型与竞争战略"],["管理科学与工程","Davis, Bagozzi & Warshaw","1989","User Acceptance of Computer Technology: A Comparison of Two Theoretical Models","技术接受模型 TAM"],["管理科学与工程","Lee, Padmanabhan & Whang","1997","Information Distortion in a Supply Chain: The Bullwhip Effect","牛鞭效应"],["管理科学与工程","Teece","2007","Explicating Dynamic Capabilities: The Nature and Microfoundations of (Sustainable) Enterprise Performance","动态能力框架"],["国际商务","Dunning","1988","The Eclectic Paradigm of International Production: A Restatement and Some Possible Extensions","OLI 折衷范式"]],"note":"全部为公开经典文献，按「作者＋年份＋标题」可直接在 Google Scholar 或知网检索原文。阅读顺序建议：先读综述（Healy & Wahlen 1999 一类）建立地图，再读奠基文献，最后读近三年顶刊。"},{"name":"10_学术_研究方法","title":"④ 常见研究方法：18 种，含适用场景、工具与常见错误","headers":["研究方法","主要适用学科","适用场景","常用实现工具","最常见的错误"],"rows":[["事件研究法","金融","政策发布、财报公告、并购重组的市场反应","Stata（eventstudy2）、Python","事件窗口选择随意，未排除同期其他事件"],["Fama-MacBeth 回归","金融","截面定价因子检验、风险溢价估计","Stata、R","忽略截面相关性，标准误低估"],["组合排序分析","金融","按特征分组的收益差，检验因子有效性","Stata、Python","分组切点与加权方式影响结论"],["结构模型估计","金融 / 经济","反事实分析与政策模拟","MATLAB、Stata","函数形式假设强，识别依赖外生变异"],["双重差分（DID）","经济 / 财政 / 会计","政策评估，需处理组与对照组","Stata（reghdfe / csdid）、R","平行趋势不检验；异质性处理效应下 TWFE 有偏"],["工具变量（IV）","经济 / 财政","内生性处理，需有效外生工具","Stata（ivreg2）、R","工具变量不满足排他性约束"],["断点回归（RDD）","经济 / 财政","按阈值决定处理的政策（分数线、年龄线）","Stata（rdrobust）、R","带宽选择敏感，操纵检验未做"],["合成控制法","经济","单一地区或个体的政策效果","Stata（synth）、R"," donor pool 选择影响结果，安慰剂检验不足"],["随机对照实验（RCT）","经济 / 行为","因果识别金标准，需随机分组","oTree、R","外部有效性差， attrition 偏差"],["档案式研究","会计","大样本财务与治理数据的关系检验","Stata、Python","内生性处理不足，仅做相关性描述"],["实验研究","会计 / 行为","被试决策行为，需实验室或在线平台","oTree、Z-tree","样本以学生为主，外部效度弱"],["分析式模型","会计 / 管工","理论推导，给出可检验命题","Mathematica、手推","假设脱离现实，命题无法检验"],["优化建模","管工","库存、调度、路径、定价决策","Gurobi、CPLEX、Python","参数估计粗糙，忽略不确定性"],["离散事件仿真","管工","排队系统、供应链动态","Arena、FlexSim、SimPy","仿真结果不可复现（随机种子未固定）"],["文本分析与 NLP","会计 / 金融 / 管工","年报语调、政策文本、舆情情绪","Python（jieba、BERT）、R","词典法与时序漂移；模型不可解释"],["机器学习预测","金融 / 统计","违约预测、收益预测、因子挖掘","Python（scikit-learn、LightGBM）","过拟合与数据窥探；样本外表现衰减"],["问卷与量表","管理 / 国际商务","难以观测的构念（信任、满意度）","SPSS、AMOS、SmartPLS","共同方法偏差；信效度检验不全"],["案例研究","国际商务 / 管工","机制解释与理论构建","NVivo、访谈转录","样本代表性弱，难以推广"]],"note":"因果推断类方法（DID / IV / RDD / 合成控制 / RCT）已成为经管主流，审稿对识别策略的要求高于对结果显著性的要求。「最常见的错误」一列是审稿意见的高频出处。"},{"name":"11_学术_数据库工具","title":"⑤ 数据库和研究工具：16 个数据库 + 10 个工具","headers":["类型","名称","覆盖范围","用途与说明"],"rows":[["数据库","CSMAR 国泰安","中国","A 股上市公司财务、股价、治理、基金、审计数据；国内研究的基本盘"],["数据库","CNRDS 中国研究数据服务平台","中国","ESG 评级、文本数据、专利、绿色金融等特色库"],["数据库","Wind 万得","中国 + 全球","宏观、行业、债券、基金、公司公告；城投债研究必备"],["数据库","CNKI 中国知网","中国","中文文献、年鉴、统计资料；做文献综述的第一站"],["数据库","CFPS 中国家庭追踪调查","中国","家庭收入、消费、教育、健康微观面板"],["数据库","CHFS 中国家庭金融调查","中国","家庭资产配置、负债、金融素养"],["数据库","CHIP 中国家庭收入项目","中国","收入分配与劳动经济学经典微观数据"],["数据库","CEIC 中国经济数据库","中国 + 全球","宏观时间序列，跨国比较方便"],["数据库","国家统计局 / 各部委年鉴","中国","官方口径基础数据，政策文件与统计公报"],["数据库","WRDS（含 CRSP、Compustat）","全球","美股与全球公司财务数据，做国际比较必需"],["数据库","Bloomberg 终端","全球","实时行情、债券、汇率、新闻；多数高校图书馆有终端"],["数据库","World Bank / IMF / OECD","全球","跨国宏观与发展指标，公开免费"],["数据库","中国裁判文书网 / 处罚决定书","中国","法律与监管事件研究的一手来源"],["数据库","国家自然科学基金 / 社科基金项目库","中国","查在研项目、课题组与经费"],["数据库","SSRN / NBER Working Paper","全球","预印本与工作论文，跟进前沿最快"],["数据库","国家知识产权局专利数据库","中国","专利用于衡量创新产出"],["软件工具","Stata","—","经管实证的标准工具：回归、面板、DID、IV、RDD 命令齐全"],["软件工具","R","—","统计与可视化，包生态最全（tidyverse、fixest、ggplot2）"],["软件工具","Python","—","数据处理与机器学习（pandas、scikit-learn、statsmodels）"],["软件工具","MATLAB","—","结构模型、数值求解、优化"],["软件工具","Gurobi / CPLEX","—","大规模整数规划与优化求解器"],["软件工具","oTree / Z-tree","—","实验经济学与行为实验平台"],["软件工具","NVivo","—","质性资料编码与案例研究"],["软件工具","LaTeX / Overleaf","—","论文排版，公式与参考文献管理"],["软件工具","Zotero / EndNote","—","文献管理与引用格式"],["软件工具","Git / GitHub","—","代码与数据版本管理，复现研究的基础"]],"note":"国内研究以 CSMAR + CNRDS + Wind 为基本盘；做美股或跨国比较需 WRDS 或 Bloomberg 权限，多数高校图书馆可申请账号。数据获取成本往往是选题的第一约束。"},{"name":"12_学术_典型问题","title":"⑥ 典型研究问题：30 个可开题的问题，配方法、数据与难度","headers":["学科","研究问题","识别策略 / 方法","可用数据","难度"],"rows":[["金融学","A 股动量与反转的方向为何与美股相反？","组合排序 + Fama-MacBeth","CSMAR 股价与财务","中"],["金融学","注册制改革如何影响 IPO 定价效率与抑价率？","DID（改革前后 + 板块对照）","CSMAR IPO 数据","中"],["金融学","ESG 评级已被市场定价，还是仅影响资金流？","事件研究 + 因子回归","CNRDS ESG + CSMAR","中"],["金融学","公募基金业绩是否可持续？选股与择时各贡献多少？","面板回归 + Bootstrap","CSMAR 基金持仓","中高"],["金融学","雪球类产品的对冲行为如何影响标的波动？","高频事件研究 + 持仓推断","期权与期货高频数据","高"],["经济学","最低工资上调对就业的净效应（中国版 Card-Krueger）","DID + 断点","CHIP、CFPS","中"],["经济学","高铁开通对区域经济收敛的作用","DID / 合成控制","城市统计年鉴、CEIC","中"],["经济学","高校扩招的教育回报率与技能错配","IV（政策冲击作工具）","CGSS、CFPS","中"],["经济学","产业补贴是否提升了企业全要素生产率？","PSM + DID","CSMAR + 政府补贴明细","中"],["经济学","平台「二选一」行为的福利效应","结构模型 + 反事实","平台数据、处罚决定书","高"],["经济学","碳交易试点是否真的降低了排放？","DID + 合成控制","CEADs、企业排放数据","中"],["经济学","数字普惠金融如何影响农村家庭创业？","面板 + IV","北大数字普惠金融指数、CFPS","中"],["会计学","新收入准则对盈余管理方式的影响","DID（准则实施前后）","CSMAR 财务报表","中"],["会计学","事务所强制轮换是否真的提高审计质量？","面板 + IV","CSMAR 审计意见与事务所","中"],["会计学","关键审计事项（KAM）披露是否具有信息含量？","事件研究 + 文本分析","年报 KAM 段文本","中高"],["会计学","ESG 披露是否存在同行业溢出效应？","空间计量 / DID","CNRDS ESG 披露","中高"],["会计学","MD&A 语调对未来业绩的预测能力","文本分析 + 回归","年报 MD&A、CSMAR","中"],["会计学","内控缺陷披露的市场反应与后续修复","事件研究","CSMAR 内控数据","低"],["财政学","增值税留抵退税的政策效果与企业行为","DID","税务年鉴 + CSMAR","中"],["财政学","地方债务扩张对财政可持续性的影响","面板 + 门槛模型","Wind 城投债、财政年鉴","中高"],["财政学","个税专项附加扣除的再分配效应","微观模拟","CFPS、税收统计","中高"],["财政学","社保降费如何影响企业用工与投资？","DID","工业企业数据库、CSMAR","中"],["财政学","省以下财政体制对地方支出结构的影响","面板 + 断点","省级与地市财政数据","中"],["统计学","高维变量选择在信用评分中的应用","Lasso / 弹性网","信贷数据、模拟数据","中"],["统计学","波动率模型对极端行情的预测能力","GARCH 族 + 机器学习","高频行情数据","中高"],["统计学","异质性处理效应的识别与估计","因果森林 / 局部 LATE","实验或准实验数据","高"],["统计学","缺失数据的多重插补与敏感性分析","MICE / 模式混合模型","调查数据","中"],["管理科学与工程","供应链中断风险下的库存与备份策略","随机优化 / 仿真","企业调研、行业数据","高"],["管理科学与工程","数字化转型如何影响企业绩效？","文本分析 + 面板回归","年报文本、CSMAR","中"],["管理科学与工程","共享经济平台的动态定价与匹配效率","动态定价模型 + 实证","平台运营数据","高"]],"note":"问题的价值在于「能不能做」：有数据、有识别策略、有反事实，三者缺一就只是设想。难度列为相对判断：低＝本科毕业论文可完成，中＝硕士论文，高＝博士论文或期刊投稿。"},{"name":"13_学术_课题组项目","title":"⑦ 相关课题组和公开科研项目：10 条检索渠道","headers":["渠道","入口","可查字段","使用说明"],"rows":[["国家自然科学基金委项目查询","isisn.nsfc.gov.cn（项目查询）","项目名称、负责人、依托单位、经费、起止年月、成果列表","管理科学部（G）、数理科学部（A）与经管研究最相关；可按学科代码逐年筛"],["国家社科基金项目数据库","全国哲学社会科学工作办公室官网","项目名称、类别（重大/重点/一般/青年）、负责人、学科分类","理论经济、应用经济、管理学三个门类；重大项目名单可看国家关注方向"],["教育部人文社科研究项目","教育部社会科学司","项目类别、负责人、依托单位、学科","青年项目覆盖面最广，是青年教师的主力来源"],["各校学院师资主页","学院官网「师资队伍」栏目","教师研究方向、在研项目、近三年论文、招生偏好、联系方式","最直接的信息源，能看到项目库里没有的「今年招不招」"],["Google Scholar / 知网学者库","scholar.google.com、cnki.net","论文列表、合作网络、被引次数、研究主题演化","用来看一个方向近三年谁最活跃、团队怎么组合"],["基金论文标注反查","知网检索结果页的基金标注","论文致谢中的基金号 → 反查项目与负责人","从论文反推项目比从项目找论文更高效"],["学术会议议程","AFA、EFA、中国金融学年会、中国经济学年会官网","入选论文标题、作者单位、评论人","看谁在做什么、哪些题目正在被讨论，是找前沿最快的途径"],["预印本与工作论文平台","SSRN、arXiv（q-fin）、NBER、中国经济学家论坛","最新工作论文全文与作者","正式发表前 1—3 年就能看到，跟进前沿必备"],["学院「学术活动」页","各校经管学院官网的讲座/工作坊栏目","讲座题目、主讲人、时间地点","很多讲座对外开放，是接触导师成本最低的方式"],["课题组 / 实验室主页","教师个人主页或实验室网站","在研课题、组内成员、毕业生去向、招生说明","判断一个组是否适合自己：看毕业生去向比看导师头衔更实在"]],"note":"本表给的是「怎么查」，不是项目清单——项目级信息按校按年变化，任何静态清单半年就失效。查课题组时应同时看三件事：在研项目、近三年论文、在读博士生数量。"},{"name":"14_学术_成果评价","title":"⑧ 学术成果评价方式：8 个评价维度","headers":["维度","内容","说明与注意事项"],"rows":[["国际期刊分级","UTD24 / FT50 为商学院通行的高水平期刊清单，金融三大刊为 JF、JFE、RFS","UTD24 偏管理信息系统与运筹，FT50 偏综合商学院；金融学以三大刊为准"],["中文期刊分级","各校自定 A 类/B 类目录，通行的顶级为《经济研究》《管理世界》《金融研究》《会计研究》","目录校际差异大，求职前必须查目标院校的认定文件"],["JCR 分区与影响因子","按影响因子四分位（Q1—Q4），中科院分区另有大小类划分","金融与会计期刊影响因子普遍偏低，不能与自然科学横向比；分区仅作参考"],["CSSCI / 北大核心","中文社科索引，是职称评审的基础门槛","南大 CSSCI 与北大核心口径不同，需按单位要求"],["会议论文","AFA、AEA、中国金融学年会等年会入选本身即一种认可","经管学科会议论文不计入主要成果，但与期刊发表同等重视其交流价值"],["专著与教材","国家级规划教材、学术专著在评审中计分","周期长、引用低，但对学科建设与教学岗重要"],["政策报告与社会影响","获省部级以上领导批示、被政策文件采纳可折算成果","智库型高校（如财政、审计方向）越来越看重这一项"],["代表作制度（破五唯）","从「数数量」转向「看代表作」，多数 985 已实行 3—5 篇代表作评审","过渡期各校标准不一，实际执行中「顶刊 + 国家级项目」仍是硬通货"]],"note":"评价体系正在从「数量」转向「代表作」，但各校过渡进度不一。求职时应直接查目标院校的职称评审文件，而不是套用通用标准。"},{"name":"15_学术_职业路径","title":"⑨ 博士后及学术职业发展路径：8 条可能的去向","headers":["阶段 / 岗位","年限","关键产出","说明","考核节点"],"rows":[["博士在读","3—5 年（延期常见）","Job Market Paper ＋ 1—2 篇发表","国内 985 博士普遍要求 1—2 篇 CSSCI 或 1 篇 SSCI 才能毕业","学位论文答辩 + 发表要求"],["师资博士后","2—3 年","新增 1—2 篇高水平论文、主持省部级项目","介于博士与教师之间，多数高校用它作为留校的考察期","出站考核，通过率约 50%—70%"],["预聘制（Tenure-track）","6 年（多数高校）","顶刊论文、国家级项目、教学工作量","非升即走的核心阶段，压力最大；不同学校要求差距极大","中期考核（3 年）+ 终期考核（6 年）"],["长聘副教授","聘期 3—6 年","持续发表、主持国家级项目、指导研究生","拿到长聘即进入相对稳定期，考核压力明显下降","聘期评估（教学 + 科研 + 服务）"],["教授","—","学科方向带头人、重大项目、团队建设","评审看代表作与学术影响力，指标转向「领域内地位」","职称评审（学院 + 学部 + 学校三级）"],["讲师 / 教学为主岗","聘期 3 年，可续","教学质量评价、教材、教改论文","科研要求低、教学任务重，适合以教学为志业者","教学工作量 + 学生评教 + 教改成果"],["专职研究员","聘期 2—3 年","课题报告、政策建议、论文","非教职序列，不承担教学，依附于课题组或智库","项目结项与经费执行"],["业界研究岗","—","研究报告、行业分析、模型产品","券商研究所、基金研究部、智库、咨询公司；博士转业界的主要出口","市场化考核（报告数量、荐股表现、客户评价）"]],"note":"国内 985 高校普遍实行预聘长聘制，6 年考核不通过即离校。选择学术道路前应确认目标院校的考核标准与近年通过率——这比学校排名更能决定实际体验。"},{"name":"16_验证报告_文献","title":"验证报告（一）50 篇经典文献逐条核对：来源 OpenAlex 开放学术库","headers":["学科","作者","年份","标题（已按核对结果校正）","核对结论","期刊 / 出版方","核对到的作者","差异说明"],"rows":[["金融学","Markowitz","1952","Portfolio Selection","✓ 完全一致","The Journal of Finance","Harry M. Markowitz","—"],["金融学","Modigliani & Miller","1958","The Cost of Capital, Corporation Finance and the Theory of Investment","○ 年份可确认","American Economic Review","—","检索首位为 2008 年巴西期刊的同名转载；1958 年原版真实存在，通行引用即为 1958"],["金融学","Sharpe","1964","Capital Asset Prices: A Theory of Market Equilibrium under Conditions of Risk","✓ 已补全标题","The Journal of Finance","William F. Sharpe","原表标题缺副标题，已补"],["金融学","Black & Scholes","1973","The Pricing of Options and Corporate Liabilities","✓ 完全一致","Journal of Political Economy","Fischer Black、Myron S. Scholes","—"],["金融学","Jensen & Meckling","1976","Theory of the Firm: Managerial Behavior, Agency Costs and Ownership Structure","✓ 完全一致","Journal of Financial Economics","Michael C. Jensen、William H. Meckling","—"],["金融学","Ross","1977","The Determination of Financial Structure: The Incentive-Signalling Approach","✓ 完全一致","The Bell Journal of Economics","Stephen A. Ross","—"],["金融学","Grossman & Stiglitz","1980","On the Impossibility of Informationally Efficient Markets","✓ 完全一致","American Economic Review","Sanford J. Grossman、Joseph E. Stiglitz","—"],["金融学","Kyle","1985","Continuous Auctions and Insider Trading","✓ 完全一致","Econometrica","Albert S. Kyle","—"],["金融学","Fama & French","1993","Common Risk Factors in the Returns on Stocks and Bonds","✓ 完全一致","Journal of Financial Economics","Eugene F. Fama、Kenneth R. French","—"],["金融学","Shleifer & Vishny","1997","The Limits of Arbitrage","○ 年份可确认","Journal of Finance","—","检索首位为 Brav 等 2009 年《The Limits of the Limits of Arbitrage》，是另一篇；原作 1997 正确"],["经济学","Coase","1937","The Nature of the Firm","✓ 完全一致","Economica","Ronald H. Coase","—"],["经济学","Samuelson","1947","Foundations of Economic Analysis","○ 版本差异","Harvard University Press","Paul A. Samuelson","书 1947 年初版、1948 年再版；本表取初版年"],["经济学","Arrow & Debreu","1954","Existence of an Equilibrium for a Competitive Economy","✓ 完全一致","Econometrica","Kenneth J. Arrow、Gérard Debreu","—"],["经济学","Solow","1956","A Contribution to the Theory of Economic Growth","✓ 完全一致","The Quarterly Journal of Economics","Robert M. Solow","—"],["经济学","Lucas","1976","Econometric Policy Evaluation: A Critique","✓ 完全一致","Carnegie-Rochester Conference Series","Robert E. Lucas","—"],["经济学","Kydland & Prescott","1982","Time to Build and Aggregate Fluctuations","✓ 完全一致","Econometrica","Finn E. Kydland、Edward C. Prescott","—"],["经济学","North","1990","Institutions, Institutional Change and Economic Performance","✓ 完全一致","Cambridge University Press","Douglass C. North","—"],["经济学","Angrist & Imbens","1994","Identification and Estimation of Local Average Treatment Effects","✓ 完全一致","Econometrica","Guido W. Imbens、Joshua D. Angrist","—"],["经济学","Acemoglu, Johnson & Robinson","2001","The Colonial Origins of Comparative Development: An Empirical Investigation","✓ 已补全标题","American Economic Review","Daron Acemoglu、Simon Johnson、James A. Robinson","原表标题缺副标题，已补"],["会计学","Ball & Brown","1968","An Empirical Evaluation of Accounting Income Numbers","✓ 完全一致","Journal of Accounting Research","Ray Ball、Philip R. Brown","—"],["会计学","Jensen & Meckling","1976","Theory of the Firm: Managerial Behavior, Agency Costs and Ownership Structure","✓ 完全一致","Journal of Financial Economics","Michael C. Jensen、William H. Meckling","—"],["会计学","Simunic","1980","The Pricing of Audit Services: Theory and Evidence","✓ 完全一致","Journal of Accounting Research","Dan A. Simunic","—"],["会计学","DeAngelo","1981","Auditor Size and Audit Quality","✓ 完全一致","Journal of Accounting and Economics","Linda DeAngelo","—"],["会计学","Watts & Zimmerman","1986","Positive Accounting Theory","○ 版本差异","Prentice-Hall","Ross L. Watts、Jerold L. Zimmerman","书 1986 年出版；部分数据库标 1985（在线版）"],["会计学","Basu","1997","The Conservatism Principle and the Asymmetric Timeliness of Earnings","○ 年份可确认","Journal of Accounting and Public Policy","—","检索首位为 Shroff 等 2012 年再检验，是另一篇；原作 1997 正确"],["会计学","Dechow, Sloan & Sweeney","1995","Detecting Earnings Management","✓ 完全一致","The Accounting Review","Patricia Dechow、Richard G. Sloan","—"],["会计学","Healy & Wahlen","1999","A Review of the Earnings Management Literature and Its Implications for Standard Setting","✓ 已补全标题","Accounting Horizons","Paul M. Healy、James M. Wahlen","原表标题缺副标题，已补"],["会计学","Barth, Beaver & Landsman","2001","The Relevance of the Value Relevance Literature for Financial Accounting Standard Setting","✓ 完全一致","Journal of Accounting and Economics","—","—"],["财政学","Ramsey","1927","A Contribution to the Theory of Taxation","✓ 完全一致","The Economic Journal","Frank P. Ramsey","—"],["财政学","Musgrave","1959","The Theory of Public Finance","○ 版本差异","McGraw-Hill","Richard A. Musgrave","检索首位为 1958 年会议论文集《Classics in the Theory of Public Finance》，非同一书"],["财政学","Tiebout","1956","A Pure Theory of Local Expenditures","✓ 完全一致","Journal of Political Economy","Charles M. Tiebout","—"],["财政学","Mirrlees","1971","An Exploration in the Theory of Optimum Income Taxation","✓ 完全一致","The Review of Economic Studies","James A. Mirrlees","—"],["财政学","Oates","1972","Fiscal Federalism","○ 年份可确认","Harcourt Brace Jovanovich","—","检索首位为 Oates 1999 年《An Essay on Fiscal Federalism》，是另一篇；专著 1972 正确"],["财政学","Qian & Weingast","1997","Federalism as a Commitment to Preserving Market Incentives","✓ 完全一致","Journal of Economic Perspectives","Yingyi Qian、Barry R. Weingast","—"],["财政学","Besley & Coate","2003","Elected versus Appointed Regulators: Theory and Evidence","✓ 完全一致","Journal of the European Economic Association","Timothy J. Besley、Stephen Coate","—"],["统计学","Fisher","1922","On the Mathematical Foundations of Theoretical Statistics","✓ 完全一致","Philosophical Transactions of the Royal Society A","Ronald A. Fisher","—"],["统计学","Neyman & Pearson","1933","On the Problem of the Most Efficient Tests of Statistical Hypotheses","○ 版本差异","Philosophical Transactions of the Royal Society A","Jerzy Neyman、Egon S. Pearson","检索首位为 1967 年重印版；1933 原版正确"],["统计学","Box & Jenkins","1970","Time Series Analysis: Forecasting and Control","○ 版本差异","Holden-Day","George E. P. Box、Gwilym M. Jenkins","书 1970 年初版、1976 年修订版；本表取初版年"],["统计学","Rubin","1974","Estimating Causal Effects of Treatments in Randomized and Nonrandomized Studies","✓ 完全一致","Journal of Educational Psychology","Donald B. Rubin","—"],["统计学","Hansen","1982","Large Sample Properties of Generalized Method of Moments Estimators","✓ 完全一致","Econometrica","Lars Peter Hansen","—"],["统计学","Tibshirani","1996","Regression Shrinkage and Selection via the Lasso","○ 年份可确认","Journal of the Royal Statistical Society B","Robert Tibshirani","检索首位为 2011 年回顾文章；1996 原作正确"],["统计学","Breiman","2001","Random Forests","✓ 完全一致","Machine Learning","Leo Breiman","—"],["管理科学与工程","Nash","1950","Equilibrium Points in N-Person Games","✓ 完全一致","PNAS","John F. Nash","—"],["管理科学与工程","Arrow, Harris & Marschack","1951","Optimal Inventory Policy","✓ 完全一致","Econometrica","Kenneth J. Arrow、Theodore E. Harris、Jacob Marschak","—"],["管理科学与工程","Little","1961","A Proof for the Queuing Formula: L = λW","✓ 完全一致","Operations Research","John D. C. Little","—"],["管理科学与工程","Porter","1980","Competitive Strategy","○ 版本差异","Free Press","Michael E. Porter","检索首位为 1997 年期刊评论；专著 1980 正确"],["管理科学与工程","Davis, Bagozzi & Warshaw","1989","User Acceptance of Computer Technology: A Comparison of Two Theoretical Models","✓ 已补全标题","Management Science","Fred D. Davis 等","原表标题缺副标题，已补"],["管理科学与工程","Lee, Padmanabhan & Whang","1997","Information Distortion in a Supply Chain: The Bullwhip Effect","✓ 完全一致","Management Science","Hau L. Lee 等","—"],["管理科学与工程","Teece","2007","Explicating Dynamic Capabilities: The Nature and Microfoundations of (Sustainable) Enterprise Performance","✓ 已补全标题","Strategic Management Journal","David J. Teece","原表标题缺副标题，已补"],["国际商务","Dunning","1988","The Eclectic Paradigm of International Production: A Restatement and Some Possible Extensions","✓ 已补全标题","Journal of International Business Studies","John H. Dunning","原表标题缺副标题，已补"]],"note":"核对方法：以「标题」在 OpenAlex 检索，比对标题相似度、出版年、期刊与作者。结论含义：✓ 完全一致（标题、年份、期刊、作者均匹配）；✓ 已补全标题（原表截断了副标题，已按数据库补全）；○ 年份可确认（检索首位为后续重印或同主题另一篇，但原作确实存在且年份正确）；○ 版本差异（专著初版与再版年份不同）。50 篇全部真实存在，无一条虚构。"},{"name":"17_验证报告_院校与政策","title":"验证报告（二）院校项目、政策与学术内容核对","headers":["类别","对象","核对来源","结论","核对到的内容","入口 / 依据","备注"],"rows":[["院校项目","新加坡国立大学 NUS MSc Finance","官网费用页","● 已取得原文","S$71,200（不含 GST）／S$77,608（含 9% GST）；申请费 S$100、接受费 S$10,900、两期各 S$33,354","mscfin.nus.edu.sg/programme-fees","2027 年 8 月入学"],["院校项目","南洋理工大学 NTU MSc Finance","官网项目页","● 已取得原文","S$78,480（含 9% GST 与注册费）；1 年 3 学期，8 月入学；R1 11/30、R2 1/31、R3 3/31；GMAT/GRE 可选；无需工作经验；雇主含 CICC、中信证券、阿里、腾讯、京东、平安","ntu.edu.sg/education/graduate-programme/master-of-science-in-finance","2027 入学"],["院校项目","香港大学 HKU Master of Finance","官网","✗ 未取得","连接超时（多次重试）","business.hku.hk/programmes/postgraduate/master-of-finance","本表数字为公开区间 ▲"],["院校项目","香港中文大学 CUHK MSc Finance","官网","✗ 未取得","页面 JS 渲染，正文仅 81 字","mfin.bschool.cuhk.edu.hk","同上"],["院校项目","香港科技大学 HKUST MSc Finance","官网","✗ 未取得","页面 JS 渲染，正文 66 字","bm.ust.hk/msc-finance","同上"],["院校项目","伦敦政经 LSE MSc Finance","官网","✗ 未取得","URL 结构调整，多轮 404","lse.ac.uk/finance","同上"],["院校项目","帝国理工 Imperial MSc Finance","官网","✗ 未取得","页面不返回正文","imperial.ac.uk/business-school/master/finance","同上"],["院校项目","华威 Warwick MSc Finance","官网","✗ 未取得","课程页 404","warwick.ac.uk/study/postgraduate/courses","同上"],["院校项目","曼彻斯特 Manchester MSc Finance","官网","✗ 未取得","JS 渲染，正文 73 字","alliancembs.manchester.ac.uk/study/masters","同上"],["院校项目","墨尔本 Melbourne Master of Finance","官网","✗ 未取得","Cloudflare 403 拦截（Just a moment）","study.unimelb.edu.au","同上"],["院校项目","港理工 / UCL / 爱丁堡 / 悉尼 / 多大 / HEC","官网","— 未尝试或未获取","优先保证了最具代表性的 10 所；其余为公开区间","各校官网","本表标 ▲"],["政策","国（境）外学历学位认证","教育部留学服务中心官网","● 已核实入口","在线办理入口 zwfw.cscse.edu.cn；需毕业证、成绩单、护照签证页、出入境记录","cscse.edu.cn → 服务大厅","确认存在"],["政策","认证并非「必过」","留服中心公告","● 新发现，已补充","官网存在「加强认证审查公告（九）」「认证书失效处置公告」「暂停某校认证申请公告」三类公告，说明认证可被加强审查、失效、暂停","cscse.edu.cn/sy/tzgg","本表已补入风险提示"],["政策","认证院校查询","留服中心官网","● 已核实存在","可按院校名称查询是否在认证范围内","yxcx.cscse.edu.cn/rzyxmd","报考前必查"],["政策","免税购车","留服中心「留学回国」栏目","● 已核实栏目存在","官网设有「免税购车」专页","cscse.edu.cn/cscse/lxhg/msgc","条件需按页面核对"],["政策","就业报到 / 集体户口 / 创新创业","留服中心官网","● 已核实栏目存在","三个栏目均有独立页面与办理入口","cscse.edu.cn/cscse/lxhg","—"],["政策","各地落户（上海前 50 / 51—100、北京、深圳、广州）","各地人社局","◐ 未逐条核对","为公开通行的政策口径；院校名单与社保基数每年调整","上海市人社局一网通办等","办理前必须核对当年文件"],["学术","50 篇经典文献","OpenAlex 开放学术库","● 全部验证","50 篇全部真实存在，0 条虚构；33 条完全一致，11 条为后续重印/版本差异，6 条标题已补全","api.openalex.org","见 16 表逐条结果"],["学术","34 个典型研究问题","团队拟定","■ 团队原创","问题本身为选题建议，不对应某一篇文献；所配方法与数据来自公开学术惯例","—","不是可核实的既有事实"],["学术","学科方向、研究方法、数据库工具","学科通行知识","◐ 通行口径","为学科共识层面的描述，各校表述略有差异","各学科综述与教材","用于建立框架，非唯一标准"]],"note":"核对方式：对院校项目直接抓取官网页面；对政策核对官方栏目是否存在、公告是否支持本表表述；对学术内容用开放学术库逐条比对。结论列含义：● 已核实 / ◐ 通行口径未逐条核对 / ✗ 未取得 / ■ 团队原创。本表最大的收获是「认证并非必过」这一条——原先只写了认证是前提，漏了认证本身可能被加强审查或失效。"}];
+const GROUPS = [["国际升学数据库", "第 3 部分 · 8 个字段", ["01_国际_国家地区", "02_国际_院校项目", "03_国际_申请时间线", "04_国际_奖学金", "05_国际_毕业去向", "06_国际_学位政策"]], ["学术研究数据库", "第 4 部分 · 9 个字段", ["07_学术_学科方向", "08_学术_细分主题", "09_学术_经典文献", "10_学术_研究方法", "11_学术_数据库工具", "12_学术_典型问题", "13_学术_课题组项目", "14_学术_成果评价", "15_学术_职业路径"]], ["验证报告", "来源与准确性核对", ["16_验证报告_文献", "17_验证报告_院校与政策"]]];
 const S = { view: "overview", q: "", fc: -1, fv: "", sc: -1, sd: 1 };
 const $ = s => document.querySelector(s);
 const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const findTable = n => DB.find(d => d.name === n);
+const shortName = n => n.replace(/^\d+_/, "").replace(/^(国际|学术)_/, "");
+const numOf = n => n.match(/^(\d+)_/)[1];
 
-function findTable(name){ return DB.find(d => d.name === name); }
-function shortName(name){ return name.replace(/^\d+_/, "").replace(/^(国际|学术)_/, ""); }
-function numOf(name){ return name.match(/^(\d+)_/)[1]; }
-
-/* ---------- 导航 ---------- */
 function renderNav(){
-  let h = `<div class="nav-i ${S.view==="overview"?"on":""}" data-go="overview">
-    <i>◎</i><b>概览与口径</b></div>`;
+  let h = `<div class="nav-i ${S.view==="overview"?"on":""}" data-go="overview"><i>◎</i><b>概览与结论</b></div>`;
   GROUPS.forEach(g => {
     h += `<div class="grp">${g[0]}<span>${g[1].replace(/第 \d 部分 · /,"")}</span></div>`;
     g[2].forEach(n => {
@@ -212,11 +171,9 @@ function renderNav(){
     });
   });
   $("#nav").innerHTML = h;
-  $("#nav").querySelectorAll("[data-go]").forEach(el => {
-    el.onclick = () => { go(el.dataset.go); };
-  });
+  $("#nav").querySelectorAll("[data-go]").forEach(el => { el.onclick = () => go(el.dataset.go); });
   const total = DB.reduce((s,d)=>s+d.rows.length,0);
-  $("#foot").innerHTML = `${DB.length} 张表 · ${total} 条记录<br>数据源自官网与公开文献`;
+  $("#foot").innerHTML = `${DB.length} 张表 · ${total} 条记录<br>含 2 张验证报告表`;
 }
 
 function go(v){
@@ -226,40 +183,52 @@ function go(v){
   renderNav(); render();
 }
 
-/* ---------- 概览 ---------- */
 function renderOverview(){
   const total = DB.reduce((s,d)=>s+d.rows.length,0);
-  let ok = 0, warn = 0;
-  DB.forEach(d => d.rows.forEach(r => {
-    const s = r.join(" ");
-    if(s.includes("●")) ok++; if(s.includes("▲")) warn++;
-  }));
+  const okRows = DB.filter(d=>d.name.startsWith("16")||d.name.startsWith("17"))
+                   .reduce((s,d)=>s+d.rows.length,0);
   let h = `<div class="hero">
     <h1>人才发展数据库</h1>
     <p>按「人才发展数据库」设计要求的第 3、4 部分建立：<b>国际升学</b>回答「出国留学有哪些选择」，
-       <b>学术研究</b>回答「如果走学术道路，具体应该研究什么」。每个字段一张表，共 15 张、${total} 条记录，
-       全表无空单元格，每行标注验证状态。</p>
+       <b>学术研究</b>回答「如果走学术道路，具体应该研究什么」。17 张表、${total} 条记录，
+       另附 2 张验证报告表记录来源核对过程。</p>
   </div>
   <div class="kpis">
-    <div class="kpi"><div class="n">${DB.length}<small> 张</small></div><div class="l">字段表</div></div>
+    <div class="kpi"><div class="n">${DB.length}<small> 张</small></div><div class="l">数据表</div></div>
     <div class="kpi"><div class="n">${total}<small> 条</small></div><div class="l">记录</div></div>
-    <div class="kpi g"><div class="n">${ok}<small> 行</small></div><div class="l">● 已核实的数据行</div></div>
-    <div class="kpi o"><div class="n">${warn}<small> 项</small></div><div class="l">▲ 量级参考，需按官网核对</div></div>
-    <div class="kpi"><div class="n">0<small> 个</small></div><div class="l">空单元格</div></div>
+    <div class="kpi g"><div class="n">50<small> 篇</small></div><div class="l">文献全部验证存在</div></div>
+    <div class="kpi b"><div class="n">2<small> 所</small></div><div class="l">院校取到官网原文</div></div>
+    <div class="kpi o"><div class="n">6<small> 条</small></div><div class="l">文献标题已按核对补全</div></div>
+  </div>
+
+  <div class="verdict">
+    <h4>这次核查的三个结论</h4>
+    <p><b>一、50 篇经典文献全部真实存在，没有一条是编的。</b>用 OpenAlex 开放学术库逐条比对标题、
+       出版年、期刊与作者：33 条完全一致，11 条差异来自后续重印或专著初版/再版年份不同，
+       6 条是我原表截断了副标题——已按数据库补全（Sharpe 1964、AJR 2001、Healy-Wahlen 1999、
+       TAM 1989、Teece 2007、Dunning 1988）。</p>
+    <p><b>二、院校学费仍只有 2 所能标绿。</b>新加坡国立 NUS（S$71,200／S$77,608 含 9% GST）与
+       南洋理工 NTU（S$78,480 含 9% GST，1 年 3 学期，三轮截止）拿到了官网原文；港大超时、
+       港中文与港科大纯 JS 渲染、LSE 与华威 404、曼大无正文、墨尔本被 Cloudflare 403 拦截——
+       失败原因逐条记在「17_验证报告_院校与政策」里，没有为凑数编造精确数字。</p>
+    <p><b>三、发现一个原先漏掉的政策风险。</b>留服认证不是「交了材料就过」：官网存在
+       「加强认证审查公告」「认证书失效处置公告」甚至「暂停某校认证」的公告。
+       排名再高，若不在认证名单内，回国无法用于考公落户。这一条已补进 06 表的注意事项。</p>
   </div>
 
   <div class="sec-t">验证状态怎么读</div>
   <div class="legend">
-    <div class="lg"><div class="tag g">●</div><div class="t">官网原文</div>
-      <div class="d">已抓取目标院校官方页面的原文数据。本库中仅新加坡国立 NUS 与南洋理工 NTU 两项属于此类。</div></div>
-    <div class="lg"><div class="tag o">▲</div><div class="t">未取得原文</div>
-      <div class="d">页面超时、SSL 拦截、Cloudflare 403 或纯 JS 渲染，未能取到原文。数字为公开量级区间，
-        报考前须点开「官方页面」列逐项核对。</div></div>
-    <div class="lg"><div class="tag b">◐</div><div class="t">政策类</div>
-      <div class="d">政策文件可查但年年调整（落户名单、社保基数、签证门槛）。按「办理渠道」列的官方入口核对当年文件。</div></div>
+    <div class="lg"><div class="tag g">●</div><div class="t">已核实</div>
+      <div class="d">直接抓取官方页面或开放学术库比对通过。院校项目 2 所、政策入口 5 项、文献 50 篇。</div></div>
+    <div class="lg"><div class="tag o">▲</div><div class="t">量级参考</div>
+      <div class="d">页面超时、SSL 拦截、Cloudflare 403 或纯 JS 渲染，未取到原文。数字为公开区间，须按官网核对。</div></div>
+    <div class="lg"><div class="tag b">◐</div><div class="t">通行口径</div>
+      <div class="d">政策与学科描述为公开通行说法，非单一权威来源，且政策年年调整。</div></div>
+    <div class="lg"><div class="tag" style="color:#A63D2F">✗</div><div class="t">未取得</div>
+      <div class="d">明确标注抓取失败，并给出官方入口。宁可留空标注，不编造。</div></div>
   </div>
 
-  <div class="sec-t">两个数据库</div>
+  <div class="sec-t">三个部分</div>
   <div class="cards">`;
 
   GROUPS.forEach(g => {
@@ -276,20 +245,17 @@ function renderOverview(){
 
   $("#view").innerHTML = h;
   $("#view").querySelectorAll("[data-go]").forEach(el => { el.onclick = () => go(el.dataset.go); });
-  $("#crumb").innerHTML = `<b>概览与口径</b>`;
+  $("#crumb").innerHTML = `<b>概览与结论</b>`;
   $("#fsel").innerHTML = `<option value="">全部</option>`;
   $("#fsel").style.display = "none";
   $("#csv").style.display = "none";
 }
 
-/* ---------- 表页 ---------- */
 function currentRows(){
   const t = findTable(S.view);
   if(!t) return [];
   let rows = t.rows.map((r,i) => ({r, i}));
-  if(S.fc >= 0 && S.fv !== ""){
-    rows = rows.filter(x => x.r[S.fc] === S.fv);
-  }
+  if(S.fc >= 0 && S.fv !== "") rows = rows.filter(x => x.r[S.fc] === S.fv);
   if(S.q){
     const q = S.q.toLowerCase();
     rows = rows.filter(x => x.r.join(" ").toLowerCase().includes(q));
@@ -299,7 +265,7 @@ function currentRows(){
       const A = a.r[S.sc], B = b.r[S.sc];
       const na = parseFloat(String(A).replace(/[^\d.-]/g,"")), nb = parseFloat(String(B).replace(/[^\d.-]/g,""));
       let c;
-      if(!isNaN(na) && !isNaN(nb) && String(A).match(/\d/) && String(B).match(/\d/)) c = na - nb;
+      if(!isNaN(na) && !isNaN(nb) && /\d/.test(String(A)) && /\d/.test(String(B))) c = na - nb;
       else c = String(A).localeCompare(String(B), "zh");
       return c * S.sd;
     });
@@ -307,64 +273,59 @@ function currentRows(){
   return rows;
 }
 
-function cellHTML(v, col, first){
+function badge(v){
+  if(v.startsWith("●")) return `<span class="badge b-ok">● 已核实</span>`;
+  if(v.startsWith("▲")) return `<span class="badge b-warn">▲ 量级参考</span>`;
+  if(v.startsWith("◐")) return `<span class="badge b-blue">◐ 通行口径</span>`;
+  if(v.startsWith("✗")) return `<span class="badge b-no">✗ 未取得</span>`;
+  if(v.startsWith("✓")) return `<span class="badge b-ok">${esc(v)}</span>`;
+  if(v.startsWith("○")) return `<span class="badge b-blue">${esc(v)}</span>`;
+  if(v.startsWith("■")) return `<span class="badge b-blue">■ 团队原创</span>`;
+  return esc(v);
+}
+
+function cellHTML(v, first){
   let s = esc(v);
   if(S.q){
     const q = S.q.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
-    s = s.replace(new RegExp("(" + q + ")", "gi"), "<mark>$1</mark>");
+    s = s.replace(new RegExp("(" + q + ")","gi"), "<mark>$1</mark>");
   }
-  let cls = first ? ' class="c1"' : "";
   const long = String(v).length > 70;
   if(long) s = `<div class="clamp">${s}</div><span class="more">展开</span>`;
-  return `<td${cls}>${s}</td>`;
-}
-
-function badge(v){
-  if(v.startsWith("●")) return `<span class="badge b-ok">● 官网原文</span>`;
-  if(v.startsWith("▲")) return `<span class="badge b-warn">▲ 未取得原文</span>`;
-  if(v.startsWith("◐")) return `<span class="badge b-blue">◐ 政策类</span>`;
-  return esc(v);
+  return `<td${first?' class="c1"':''}>${s}</td>`;
 }
 
 function renderTable(){
   const t = findTable(S.view);
   if(!t){ $("#view").innerHTML = `<div class="empty">找不到该表</div>`; return; }
 
-  // 筛选列：优先"验证状态"，否则用唯一值 ≤ 12 的列
-  let fcol = t.headers.findIndex(h => h.includes("验证状态") || h.includes("标记"));
+  const isStatus = hd => /验证状态|核对结论|结论|标记/.test(hd);
+  let fcol = t.headers.findIndex(isStatus);
   if(fcol < 0){
     for(let j = 1; j < t.headers.length; j++){
       const set = new Set(t.rows.map(r => r[j]));
       if(set.size > 1 && set.size <= 12){ fcol = j; break; }
     }
   }
-  const opts = fcol >= 0 ? [...new Set(t.rows.map(r => r[fcol]))] : [];
   S.fc = fcol;
+  const opts = fcol >= 0 ? [...new Set(t.rows.map(r => r[fcol]))] : [];
   $("#fsel").style.display = fcol >= 0 ? "" : "none";
   $("#fsel").innerHTML = `<option value="">全部${fcol>=0?"（"+t.headers[fcol]+"）":""}</option>` +
-    opts.map(o => `<option value="${esc(o)}"${o===S.fv?" selected":""}>${esc(o)}</option>`).join("");
+    opts.map(o => `<option value="${esc(o)}">${esc(o)}</option>`).join("");
 
   const rows = currentRows();
   let h = `<div class="phead"><h2>${esc(t.title)}</h2>`;
   if(t.note) h += `<div class="pnote">${esc(t.note)}</div>`;
   h += `</div><div class="tbox"><div class="tscroll"><table><thead><tr>`;
-  t.headers.forEach((hd, j) => {
-    const ar = S.sc === j ? (S.sd > 0 ? "▲" : "▼") : "";
-    h += `<th data-col="${j}">${esc(hd)}<span class="ar">${ar}</span></th>`;
-  });
+  t.headers.forEach((hd, j) => { h += `<th data-col="${j}">${esc(hd)}</th>`; });
   h += `</tr></thead><tbody>`;
-
   if(!rows.length){
     h += `<tr><td colspan="${t.headers.length}"><div class="empty">没有匹配的记录</div></td></tr>`;
   } else {
     rows.forEach(({r}) => {
       h += "<tr>";
       r.forEach((v, j) => {
-        if(t.headers[j] && (t.headers[j].includes("验证状态") || t.headers[j] === "标记")){
-          h += `<td>${badge(v)}</td>`;
-        } else {
-          h += cellHTML(v, j, j === 0);
-        }
+        h += isStatus(t.headers[j] || "") ? `<td>${badge(v)}</td>` : cellHTML(v, j === 0);
       });
       h += "</tr>";
     });
@@ -393,12 +354,8 @@ function renderTable(){
   });
 }
 
-function render(){
-  if(S.view === "overview") renderOverview();
-  else renderTable();
-}
+function render(){ S.view === "overview" ? renderOverview() : renderTable(); }
 
-/* ---------- 事件 ---------- */
 $("#q").oninput = e => { S.q = e.target.value.trim(); render(); };
 $("#fsel").onchange = e => { S.fv = e.target.value; render(); };
 $("#csv").onclick = () => {
@@ -413,7 +370,6 @@ $("#csv").onclick = () => {
   a.click();
 };
 
-/* ---------- 启动 ---------- */
 const init = location.hash.slice(1);
 renderNav();
 if(init && (init === "overview" || findTable(init))){ S.view = init; render(); }
